@@ -1,129 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<style>
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 15%;
-      height: 100%;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)), url('images/Side-1.png') no-repeat center center/cover;
-      opacity: 0.5;
-      z-index: -1;
-    }
-    body::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 15%;
-      height: 100%;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)), url('images/Side-2.png') no-repeat center center/cover;
-      opacity: 0.5;
-      z-index: -1;
-    }
-</style>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ICPS 2025 - Home</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Custom Background for Hero Section */
-    .hero-bg {
-      background: linear-gradient(to right, rgba(0, 128, 128, 0.9), rgba(34, 139, 34, 0.9)),
-                  url('images/Designer-3.jpeg') no-repeat center center / cover;
-    }
-  </style>
+    <title> ICPS 2025 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
-
-  <nav class="bg-teal-600 text-white py-6">
-    <div class="container mx-auto flex flex-wrap justify-center space-x-8">
-      <a href="index.html" class="text-teal-100 hover:text-green-400 text-lg font-semibold transition-all">Home</a>
-      <a href="about.html" class="text-teal-100 hover:text-green-400 text-lg font-semibold transition-all">About</a>
-      <a href="key-themes.html" class="text-teal-100 hover:text-green-400 text-lg font-semibold transition-all">Key Themes</a>
-      <a href="committees.html" class="text-teal-100 hover:text-green-400 text-lg font-semibold transition-all">Committees</a>
-      <a href="important-dates.html" class="text-teal-100 hover:text-green-400 text-lg font-semibold transition-all">Important Dates</a>
-      <a href="#call-for-papers" class="text-teal-100 hover:text-green-400 text-lg font-semibold transition-all">Call for Papers</a>
+<body>
+    <!-- Menu Bar -->
+    <script>
+        fetch('menu.html')  // Path to the menu.html file
+        .then(response => response.text())  // Fetch data from menu.html
+        .then(data => { // Place the fetched data into the file
+            document.getElementById('menu-container').innerHTML = data;  
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+    </script>
+    <div id="menu-container"></div>
+    
+    
+    <!-- Hero Section-->
+    <div class="hero-grid">
+        <div class="hero-content-bgimage">
+            <div class="hero-content-grid">
+                <div class="hero-center-text">
+                    <h1> International Conference on Power Systems (ICPS) 2025 </h1>
+                    <p class="hero-subcaption"> at Indian Institute of Technology Hyderabad, INDIA</p>
+                    <button class="hero-button"> <a href="#"> Call for Papers </a> </button>
+                    <button class="hero-button"> <a href="#"> Submit Paper </a> </button>
+                </div>
+                <!--<img src="images/Logo.png" alt="Hero Image" class="hero-right-logo">-->
+            </div>
+        </div>
     </div>
-  </nav>
-
-  <div class="container mx-auto px-4 py-16">
-
-    <!-- Hero Section with Background Image -->
-    <section class="hero-bg text-white py-16 rounded-xl shadow-lg mb-16">
-      <div class="text-left max-w-4xl mx-auto">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-6">Welcome to ICPS 2025</h1>
-        <p class="text-xl md:text-2xl mb-6">
-          We are delighted to welcome you to the International Conference on Power Systems 2025, hosted by the Department of Electrical Engineering at IIT Hyderabad. This prestigious event will highlight the latest advancements in power systems, renewable energy solutions, and the integration of smart grid technologies.
-        </p>
-      </div>
-
-      <div class="text-center">
-        <a href="#call-for-papers" class="bg-green-600 text-white px-8 py-4 rounded-full text-xl font-medium hover:bg-green-700 transition-all mt-8">Submit Your Paper</a>
-      </div>
-    </section>
-
-    <!-- Conference Theme Section -->
-    <div class="bg-gradient-to-r from-teal-600 to-green-700 text-white py-8 px-6 rounded-lg shadow-lg max-w-4xl mx-auto mb-8">
-      <h2 class="text-3xl font-bold mb-4 text-center">Conference Theme</h2>
-      <p class="text-lg md:text-xl text-center">
-        <strong>“Leveraging Smart Technologies for Clean, Resilient, and Secure Power Systems”</strong>
-      </p>
+    
+    <!-- About Section -->
+    <div class="about-grid">
+        <div class="about-content">
+            <h2> About ICPS 2025 </h2>
+            <p> The International Conference on Power Systems (ICPS) 2025, themed "<strong>Leveraging Smart Technologies for Clean, Resilient, and Secure Power Systems</strong>", aims to explore the transformative role of emerging technologies in shaping the future of global power systems.  As the power sector enters a new era driven by the need for enhanced sustainability, resilience, and security, ICPS will provide a unique forum for researchers, engineers, and policymakers from academia, industry, and practice to engage in thought-provoking discussions and collaborative efforts. The 11th edition of ICPS, scheduled for December 7-9, 2025, at IIT Hyderabad, India, will focus on the integration of renewable energy sources, smart grid innovations, and AI-driven solutions for grid management.</p>
+            <p> ICPS serves as a leading biennial forum for experts to exchange knowledge and explore the latest developments across a wide range of power systems domains, with key tracks including Smart Grid and Power Systems, Smart Generation, Transmission & Distribution, Renewable Energy Systems, and Artificial Intelligence and Data Analytics. As part of its mission to advance global collaboration, the conference will address critical issues such as grid resilience, protection, stability, optimization, and the role of emerging technologies like electric vehicles and power electronics in future power systems. </p>
+            <p> On behalf of the Steering Committee and the Organizing Committee, we cordially invite you to join us in Hyderabad for ICPS 2025. With a mix of technical sessions, interactive panel discussions, and tutorials by leading experts, this conference will provide valuable opportunities for networking, learning, and collaboration. We look forward to welcoming you to this exciting event as we work together to shape the future of power systems.</p>
+        </div>    
     </div>
-
-    <!-- About ICPS Section -->
-    <section class="mb-16 text-left">
-      <h2 class="text-3xl font-bold text-teal-600 mb-6">About ICPS 2025</h2>
-      <p class="text-lg mb-6">
-        The International Conference on Power Systems (ICPS) is a leading biennial forum established in 2004, dedicated to advancing the field of Power Engineering. It serves as a platform for experts from academia, industry, research, and practice to exchange knowledge, discuss emerging trends, and explore innovative solutions across various power system domains. The 11th edition of ICPS will be held from December 7-9, 2025, at IIT Hyderabad, India. This conference aims to foster global collaboration in the power systems domain, focusing on key areas such as renewable energy integration, smart grid innovations, and AI-based solutions for enhanced grid management. ICPS continues its tradition of exploring the latest advancements and innovations in power systems to address the challenges of the future.
-      </p>
-      <p class="text-lg mb-6">
-        Organized by the Department of Electrical Engineering at IIT Hyderabad.
-      </p>
-    </section>
-
-    <!-- Key Themes Section -->
-    <section class="mb-16 text-left">
-      <h2 class="text-3xl font-bold text-teal-600 mb-6">Key Themes of ICPS 2025</h2>
-<p class="text-lg mb-6">
-  ICPS 2025 will feature a range of critical themes in power systems, focusing on cutting-edge innovations and challenges that are shaping the future of the energy sector. These include:
-</p>
-<ul class="list-disc pl-8 text-lg mb-6">
-  <li><strong>Smart Generation, Transmission & Distribution:</strong> Exploring advancements in smart grids, automation, and real-time monitoring to enhance grid efficiency and reliability.</li>
-  <li><strong>Power Electronics & Smart Grid Control:</strong> Discussing the integration of power electronics and control systems for optimizing grid operations and enabling distributed energy resources.</li>
-  <li><strong>Grid Integration of Renewable Energy:</strong> Addressing the challenges and strategies for integrating renewable energy sources like solar and wind into the grid.</li>
-  <li><strong>Machine Learning & Data Analytics in Power Systems:</strong> Investigating the role of AI, machine learning, and big data in optimizing grid management and predictive maintenance.</li>
-  <li><strong>Energy Storage & Grid Optimization:</strong> Focusing on advancements in energy storage systems and their integration into the grid to improve reliability and reduce waste.</li>
-  <li><strong>Cybersecurity in Power Systems:</strong> Highlighting the importance of cybersecurity measures to safeguard critical infrastructure from cyber threats in modern power systems.</li>
-</ul>
-
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="text-center mb-16">
-  <h3 class="text-2xl font-bold mb-4">Contribute to the Future of Power Systems</h3>
-  <p class="text-xl mb-6">ICPS 2025 provides a platform to present your research, engage with experts in the field, and contribute to the ongoing advancements in power systems and sustainable energy solutions. We invite you to be part of this prestigious conference and share your work with the global academic community.</p>
-  <a href="#call-for-papers" class="bg-green-600 text-white px-8 py-4 rounded-full text-xl font-medium hover:bg-green-700 transition-all">Submit Your Paper</a>
-</section>
-
-  </div>
-
-
-  <!-- Footer Section -->
-  <footer class="bg-teal-700 text-teal-100 py-6">
-    <div class="container mx-auto text-center">
-      <div class="flex justify-center items-center space-x-4">
-        <img src="images/Logo.png" alt="IIT Hyderabad Logo" class="w-20 h-auto">
-        <p class="text-sm md:text-base">
-          &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
-        </p>
-      </div>
+    
+    <!-- Important Dates and Updates -->
+    <div class="important-dates-updates-grid">
+        <div class="important-dates-updates-content">
+            <h2> Important Dates </h2>
+            <table>
+                <tr> <th>Event</th> <th>Date</th> </tr>
+                <tr> <td>First call for papers</td> <td>20 March 2025</td> </tr>
+                <tr> <td>Paper submission opens</td> <td>01 April 2025</td> </tr>
+                <tr> <td>Full paper submission deadline</td> <td>31 May 2025</td> </tr>
+                <tr> <td>Notification of paper acceptance</td> <td>15 - 31 August 2025</td> </tr>
+                <tr> <td>Camera-ready paper submission deadline</td> <td>15 September 2025</td> </tr>
+                <tr> <td>Registration opens</td> <td>30 August 2025</td> </tr>
+                <tr> <td>Early bird registration ends</td> <td>15 October 2025</td> </tr>
+                <tr> <td>Conference dates</td> <td>7th - 9th December 2025</td> </tr>
+            </table>
+        </div>
+        <div class="important-dates-updates-content">
+            <h2> Updates </h2>
+            <table>
+                <tr> <td> First call for papers to be announced by<strong> 20 March 2025 </strong> </td> </tr>
+                <tr> <td> Paper Submissions will open from <strong> 01 April, 2025 </strong> </td> </tr>
+            </table>
+        </div>
     </div>
-  </footer>
-
 </body>
+
+<footer class="footer-grid">
+    <div class="footer-content">
+        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+    </div>
+</footer>
 </html>
