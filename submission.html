@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ICPS 2025 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Menu Bar -->
+    <script>
+        fetch('menu.html')  // Path to the menu.html file
+        .then(response => response.text())  // Fetch data from menu.html
+        .then(data => { // Place the fetched data into the file
+            document.getElementById('menu-container').innerHTML = data;  
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+    </script>
+    <div id="menu-container"></div>
+    
+    <!-- Submission Guidelines -->
+    <div class="text-box-grid">
+        <div class="text-box-content">
+            <h2> Author and Manuscript Guidelines </h2>
+            <p>The following are the detailed guidelines for the submission of your manuscript to the conference. Kindly review them thoroughly prior to submitting your paper.</p>
+            <ul>
+                <li>All submissions must be in English.</li>
+                <li>Papers must be original and not under consideration for publication elsewhere.</li>
+                <li>Papers must be formatted strictly according to IEEE two-column format. They should not exceed six (6) A4 pages in length and must be submitted as a PDF file (maximum size: 2MB) [The template can be downloaded from <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank">here</a>] . </li>
+                <li>The conference adheres to a strict plagiarism policy. Authors are encouraged to check for plagiarism before submitting their papers, and plagiarism checks must be done prior to uploading to IEEE Xplore. For more details, refer to <a href="https://www.ieee.org/publications/rights/plagiarism.html" target="_blank">IEEE Plagiarism Policy</a>.</li>
+                <li>Only submissions made through CMT will be considered. Papers submitted via other means will not be accepted.</li>
+                <li>Submissions must be in PDF format. No other formats will be accepted.</li>
+                <li>All submitted papers will undergo a plagiarism check. Papers with a similarity index of 15% or higher (excluding references) may be rejected without review.</li>
+                <li>During submission, authors should select one topic category that best aligns with the content of their paper. This helps the committee assign appropriate reviewers and schedule sessions.</li>
+                <li>If your paper fits the conference theme but does not match any listed topics, please contact the Technical Program Chair at <a href="mailto:chair@icps2025.in">chair@icps2025.in</a> for guidance.</li>
+                <li>A unique Paper ID will be assigned to each submission. Please reference this ID in all communications.</li>
+                <li>Authors will be notified of acceptance or rejection via email by the date specified on the homepage. If revisions are required, you will be informed. Final camera-ready papers must be submitted by the specified deadline.</li>
+                <li>Paper title and author order must remain unchanged in the final submission.</li>
+                <li>Reviewers' comments must be addressed in the final paper before submission.</li>
+            </ul>
+            <h2> Paper Submission Portal</h2>
+            <p><strong>Important Notice:</strong> It is proposed to use the CMT portal for paper submissions. The approval from CMT is currently pending and will be updated here once finalized. Authors are requested to follow the CMT link for submissions, adhering to the conference timeline once approval is granted.</p>
+            <button><a href="https://cmt3.research.microsoft.com/icps2025" target="_blank">CMT Submission Portal</a></button>
+            <p> <strong>Acknowledgement:</strong> The <a href="https://cmt3.research.microsoft.com">Microsoft CMT service</a> was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support. </p>
+            <h2> Submission Guidelines </h2>
+            <ol>
+                <li>Log in to <a href="https://cmt3.research.microsoft.com/icps2025" target="_blank">CMT Submission Portal</a> (Note: the link will remain active until the submission deadline).</li>
+                <li>Choose one track that best matches the content of your paper.</li>
+                <li>Complete the submission form with author details, affiliations, and other required information.</li>
+                <li>Upload your paper in PDF format.</li>
+            </ol>
+        </div>
+    </div>
+
+
+</body>
+
+<footer class="footer-grid">
+    <div class="footer-content">
+        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+    </div>
+</footer>
+</html>
