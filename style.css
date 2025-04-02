@@ -25,13 +25,9 @@ body{
     --nav-border-radius: 10px; 
     /* Nav Bar Padding and Margin */
     --nav-padding: 10px; 
-    --nav-margin: 0px; 
     /* Nav Bar Font and text Settings*/
-    --nav-font-size: 18px; 
+    --nav-font-size: 1.125rem; 
     --nav-font-weight: 900;
-    --nav-text-align: center;
-    --nav-font-style: normal; /*italic|oblique|initial|inherit*/
-    --nav-text-transform: none; /*capatilize|uppercase|lowercase|initial|inherit*/
 	/* Hero Section color settings*/
 	--hero-center-text-color: #ffffff;
 	--hero-subcaption-text-color: #ffffff;
@@ -43,30 +39,23 @@ body{
 
 .nav-grid {
 	display: grid;
-	/* Columns and Rows*/
 	grid-template-columns: repeat(auto-fit, minmax(175px, max-content)); 
 	grid-auto-rows: auto;
-	/* Horizontal and Vertical Allignment*/
 	justify-content: flex-end; 
 	align-items: center; 
-	/* Padding, Margin*/
 	padding: var(--nav-padding); 
-	margin: var(--nav-margin); /* Center the menu container */
-	background-color: var(--nav-bg-color); /* Added background color */
-	width: auto; /* To adjust the nav bar based on width of all columns*/
+	margin: 0px; 
+	background-color: var(--nav-bg-color); 
+	width: auto; 
 }
 
 .nav-grid a {
 	color: var(--nav-text-color);
-	background-color: var(--nav-bg-color);
-	text-decoration: none; /* To remove the underline of anchors*/
+	background-color: inherit;
 	font-size: var(--nav-font-size);
     font-weight: var(--nav-font-weight);
-    text-transform: var(--nav-text-transform);
-    text-align: var(--nav-text-align);
-    border-color: var(--nav-border-color);
-    border-width: var(--nav-border-width);
-    border-radius: var(--nav-border-radius);
+    text-align: center;
+	text-decoration: none; 
 	padding: var(--nav-padding);
 	display: block;
 }
@@ -82,6 +71,8 @@ body{
 	display: inline-block;
 	width:inherit;
 	text-align: center;
+	font-size: var(--nav-font-size);
+	font-weight: var(--nav-font-weight);
 }
 
 .dropdown-btn{
@@ -103,6 +94,8 @@ body{
 	background-color: var(--nav-hoover-bg-color);
 	text-decoration: none; /* To remove the underline of anchors*/
 	width: 100%;
+	font-size: var(--nav-font-size);
+	font-weight: var(--nav-font-weight);
 }
 
 .dropdown-content {
@@ -113,6 +106,8 @@ body{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 	border-radius: var(--nav-border-radius);
+	font-size: var(--nav-font-size);
+	font-weight: var(--nav-font-weight);
 }
 
 .dropdown-content a {
