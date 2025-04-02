@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ICPS 2025 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Menu Bar -->
+    <script>
+        fetch('menu.html')  // Path to the menu.html file
+        .then(response => response.text())  // Fetch data from menu.html
+        .then(data => { // Place the fetched data into the file
+            document.getElementById('menu-container').innerHTML = data;  
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+    </script>
+    <div id="menu-container"></div>
+    
+    <div class="hero-nobg">
+        <div class="page-title">
+            Conference Registration Details
+        </div>
+    </div>
+
+    <!-- Contact Information-->
+    <div class="oc-grid">
+        <div class="oc-grid-content">  
+            <h2> Registration Fees </h2>          
+            <p>The registration fees for ICPS 2025 are outlined below. We encourage you to register before the deadlines to take advantage of the Early Bird registration discounts. The fees provide access to all conference activities, including technical sessions, breakfasts, lunches, dinners, and coffee breaks.</p>
+            <table class="tables-format">
+                <tr>
+                    <th rowspan="2">Category</th>
+                    <th colspan="2">Indian Authors</th>
+                    <th colspan="2">International Authors</th>
+                </tr>
+                <tr>
+                    <th>Early Bird</th>
+                    <th>Standard</th>
+                    <th>Early Bird</th>
+                    <th>Standard</th>
+                </tr>
+                <tr>
+                    <td>Non-IEEE Member</td>
+                    <td>₹ 11,700/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>₹ 13,000/-</td>
+                    <td>$ 405/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>$ 450/-</td>
+                </tr>
+                <tr>
+                    <td>IEEE Member</td>
+                    <td>₹ 9,900/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>₹ 11,000/-</td>
+                    <td>$ 360/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>$ 400/-</td>
+                </tr>
+                <tr>
+                    <td>IEEE Life Member</td>
+                    <td>₹ 4,500/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>₹ 5,000/-</td>
+                    <td>$ 153/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>$ 170/-</td>
+                </tr>
+                <tr>
+                    <td>Non-IEEE Student Member</td>
+                    <td>₹ 4,500/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>₹ 5,000/-</td>
+                    <td>$ 153/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>$ 170/-</td>
+                </tr>
+                <tr>
+                    <td>IEEE Student Member</td>
+                    <td>₹ 4,050/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>₹ 4,500/-</td>
+                    <td>$ 144/-</td> <!-- Applied 10% Early Bird Discount -->
+                    <td>$ 160/-</td>
+                </tr>
+            </table>
+            <p><strong>Note:</strong> The registration fees are inclusive of all taxes. The Early Bird registration deadline is 15 October 2025. After this date, the standard registration fees will apply.</p>
+            <h3> Important Notes:</h3>
+            <ul>
+                <li>Each full registration is valid for one paper. An additional paper can be included for ₹4,000 extra (INR) or $100 (USD).</li>
+                <li>Student registrations are not valid for inclusion of papers in the conference proceedings.</li>
+                <li>Registration includes access to all conference activities, including technical sessions, breakfasts, lunches, dinners, and coffee breaks.</li>
+                <li>All registration fees are non-refundable.</li>
+                <li>Additional transaction fees may apply depending on the payment method.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<footer class="footer-grid">
+    <div class="footer-content">
+        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+    </div>
+</footer>
+</html>

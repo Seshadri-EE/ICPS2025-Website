@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ICPS 2025 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Menu Bar -->
+    <script>
+        fetch('menu.html')  // Path to the menu.html file
+        .then(response => response.text())  // Fetch data from menu.html
+        .then(data => { // Place the fetched data into the file
+            document.getElementById('menu-container').innerHTML = data;  
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+    </script>
+    <div id="menu-container"></div>
+    
+    <div class="hero-nobg">
+        <div class="page-title">
+            ICPS 2025 program
+        </div>
+    </div>
+
+    <!-- Contact Information-->
+    <div class="oc-grid">
+        <div class="oc-grid-content">  
+            <h2> Conference Program Overview </h2>          
+            <p>The <strong>ICPS 2025 Conference Program</strong> will feature a mix of engaging technical sessions, insightful keynote addresses, and thought-provoking panel discussions. As we continue to finalize the details, the program will be updated in due course with more information on session timings, speakers, and topics. </p>
+        </div>
+    </div>
+</body>
+
+<footer class="footer-grid">
+    <div class="footer-content">
+        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+    </div>
+</footer>
+</html>

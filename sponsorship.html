@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ICPS 2025 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Menu Bar -->
+    <script>
+        fetch('menu.html')  // Path to the menu.html file
+        .then(response => response.text())  // Fetch data from menu.html
+        .then(data => { // Place the fetched data into the file
+            document.getElementById('menu-container').innerHTML = data;  
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+    </script>
+    <div id="menu-container"></div>
+    
+    <div class="hero-nobg">
+        <div class="page-title">
+            <h2>Sponsorship Opportunities</h2>
+        </div>
+    </div>
+
+    <!-- Sponsorship Information -->
+    <div class="oc-grid">
+        <div class="oc-grid-content">
+            <h2>Become a Sponsor of ICPS 2025</h2>
+            <p>ICPS 2025 provides a unique opportunity to highlight your organization’s innovation in the power systems and energy technology sectors. Sponsorship will provide your company with high visibility among a diverse group of industry professionals, academics, and researchers.</p>
+            <p>We are currently in the process of finalizing our sponsorship packages. Details on available sponsorship tiers and benefits will be updated soon. Please check back periodically for the latest information.</p>
+            <p>If you are interested in becoming a sponsor or would like more information, please feel free to reach out to us at <strong>chair@icps2025.in</strong>.</p>
+        </div>
+    </div>
+</body>
+
+<footer class="footer-grid">
+    <div class="footer-content">
+        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+    </div>
+</footer>
+</html>

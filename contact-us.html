@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ICPS 2025 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Menu Bar -->
+    <script>
+        fetch('menu.html')  // Path to the menu.html file
+        .then(response => response.text())  // Fetch data from menu.html
+        .then(data => { // Place the fetched data into the file
+            document.getElementById('menu-container').innerHTML = data;  
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+    </script>
+    <div id="menu-container"></div>
+    
+    <div class="hero-nobg">
+        <div class="page-title">
+            Contact Us - ICPS 2025
+        </div>
+    </div>
+
+    <!-- Contact Information-->
+    <div class="oc-grid">
+        <div class="oc-grid-content">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or require further clarification regarding ICPS 2025, please feel free to reach out to us. Our team will be pleased to provide the necessary support.</p>
+
+            <h3>General Chair</h3>
+            <p><strong>Prof. Ravikumar Bhimasingu</strong><br>
+            Department of Electrical Engineering, IIT Hyderabad<br>
+            Email: <a href="mailto:chair@icps2025.in">chair@icps2025.in</a></p>
+
+            <h3>For General Inquiries</h3>
+            <p>If you have any general inquiries about the conference, please contact us at:</p>
+            <p>Email: <a href="mailto:contact@icps2025.in">contact@icps2025.in</a></p>
+
+            <h3>Organizing Institute</h3>
+            <p><strong>Address:</strong> Department of Electrical Engineering, IIT Hyderabad, India</p>
+        </div>
+    </div>
+</body>
+
+<footer class="footer-grid">
+    <div class="footer-content">
+        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+    </div>
+</footer>
+</html>
