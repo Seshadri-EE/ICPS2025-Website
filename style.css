@@ -135,7 +135,7 @@ body{
 }
 
 /* Responsive Design */
-@media (max-width: 960px) {
+@media (max-width: 600px) {
     .nav-grid {
         grid-template-columns: 1fr; 
         grid-template-rows: auto;
