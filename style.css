@@ -338,6 +338,12 @@ body{
 	align-self: start;
 }
 
+.table-container {
+    width: 100%; /* Ensure the container spans the full width */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
+}
+
 .table-format{
     margin: 0; /* margin: 0 auto; centers the table within the container */
 	margin-bottom: 20px;
@@ -349,7 +355,6 @@ body{
     margin: 0 auto; /* margin: 0 auto; centers the table within the container */
 	margin-bottom: 20px;
     border-collapse: collapse;
-	table-layout: auto;
 }
 
 .table-format th, .tables-format th{
@@ -571,7 +576,7 @@ body{
 
 	.tracks-grid, .committee-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 80vw));
+		grid-template-columns: repeat(auto-fit, minmax(150px, 80vw));
 		grid-template-rows: auto;
 		grid-gap: 10px;
 	}
