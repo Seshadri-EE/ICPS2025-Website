@@ -522,6 +522,11 @@ body{
 
 /* Responsive Design */
 @media (max-width: 600px) {
+
+	body {
+		padding-top: 65px; /* Adjust this value to match the height of the navigation bar */
+	}
+
     .nav-grid {
 		width: 100%;
 		grid-template-columns: 1fr; 
@@ -534,6 +539,7 @@ body{
         background-color: var(--nav-bg-color); /* Keeps the background color consistent */
         padding: var(--nav-padding); /* Adds padding for better appearance */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+		height: 45px;
     }
 
     .nav-grid a, .dropdown-btn {
@@ -554,11 +560,11 @@ body{
 
     .dropdown:hover .dropdown-content {
         display: block; /* Ensure dropdown content is displayed on hover */
-		right: 10px;
+		right: 20px;
     }
 
 	.hero-grid, .hero-grid-iith{
-		height: 70vh; /* Adjust height for smaller screens */
+		height: 80vh; /* Adjust height for smaller screens */
 	}
 
 }
