@@ -569,4 +569,11 @@ body{
 		height: 80vh; /* Adjust height for smaller screens */
 	}
 
+	.tracks-grid, .committee-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 85vw));
+		grid-template-rows: auto;
+		grid-gap: 15px;
+	}
+
 }
