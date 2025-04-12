@@ -342,12 +342,14 @@ body{
     margin: 0; /* margin: 0 auto; centers the table within the container */
 	margin-bottom: 20px;
     border-collapse: collapse;
+	table-layout: auto;
 }
 
 .tables-format{
     margin: 0 auto; /* margin: 0 auto; centers the table within the container */
 	margin-bottom: 20px;
     border-collapse: collapse;
+	table-layout: auto;
 }
 
 .table-format th, .tables-format th{
