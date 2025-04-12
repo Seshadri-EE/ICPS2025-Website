@@ -576,4 +576,10 @@ body{
 		grid-gap: 10px;
 	}
 
+	.table-format td, .table-format th, .tables-format td, .tables-format th {
+		word-wrap: break-word; /* Break long words */
+		overflow-wrap: break-word; /* Ensure text wraps within the cell */
+		white-space: normal; /* Allow text to wrap to the next line */
+	}
+
 }
