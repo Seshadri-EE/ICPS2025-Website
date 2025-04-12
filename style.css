@@ -63,7 +63,10 @@ body{
 .nav-grid a:hover{
 	color: var(--nav-hoover-text-color);
 	background-color: var(--nav-hoover-bg-color);
-	text-decoration: none; /* To remove the underline of anchors*/
+}
+
+.nav-grid a:first-child {
+	display: none; /* Show only the first navigation item */
 }
 
 .dropdown {
@@ -81,7 +84,6 @@ body{
 	text-decoration: none; /* To remove the underline of anchors*/
 	font-size: var(--nav-font-size);
     font-weight: var(--nav-font-weight);
-    text-transform: var(--nav-text-transform);
     text-align: var(--nav-text-align);
     border-color: var(--nav-border-color);
     border-width: var(--nav-border-width);
@@ -104,6 +106,7 @@ body{
 	background-color: var(--nav-text-color);
 	min-width: max-content;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	right: 0;	
 	z-index: 1;
 	border-radius: var(--nav-border-radius);
 	font-size: var(--nav-font-size);
@@ -130,6 +133,39 @@ body{
 	width: inherit;
 	min-width: max-content;
 }
+
+/* Responsive Design */
+@media (max-width: 960px) {
+    .nav-grid {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        justify-items: flex-end;
+        position: fixed; /* Makes the menu sticky */
+        top: 0; /* Sticks the menu to the top of the viewport */
+		right: 0;
+        z-index: 1000; /* Ensures it stays above other elements */
+        background-color: var(--nav-bg-color); /* Keeps the background color consistent */
+        padding: var(--nav-padding); /* Adds padding for better appearance */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+    }
+
+    .nav-grid a, .dropdown-btn {
+        display: none; /* Hide all navigation items */
+    }
+
+    .nav-grid a:first-child {
+        display: block; /* Show only the first navigation item */
+    }
+
+    .nav-grid:hover a, .nav-grid:hover .dropdown-btn {
+        display: block; /* Show all navigation items and dropdown button on hover */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block; /* Ensure dropdown content is displayed on hover */
+    }
+}
+
 
 .hero-grid{
 	display: grid;
