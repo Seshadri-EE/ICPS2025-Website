@@ -571,9 +571,9 @@ body{
 
 	.tracks-grid, .committee-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 85vw));
+		grid-template-columns: repeat(auto-fit, minmax(200px, 80vw));
 		grid-template-rows: auto;
-		grid-gap: 15px;
+		grid-gap: 10px;
 	}
 
 }
