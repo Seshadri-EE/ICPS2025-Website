@@ -284,6 +284,19 @@ body{
 	text-align: left;
 }
 
+.tc-grid-content-border h2{
+	font-size: 1.5rem;
+	background-color: #B2DFDB;
+	color: #004D40;
+	border-radius: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 0px;
+	text-align: center;
+}
+
 .oc-grid-content h3, .tc-grid-content h3{
 	font-size: 1.25rem;
 	color: #000000;
@@ -306,11 +319,22 @@ body{
 	text-align: justify;
 }
 
-.oc-grid-content ul, .oc-grid-content ol{
+.oc-grid-content ul, .oc-grid-content ol, .tc-grid-content ul, .tc-grid-content ol, .tc-grid-content-border ul, .tc-grid-content-border ol{
 	font-size: 1.2rem;
 	color: var(--theme-text-color);
 	padding: 0;
 	padding-bottom: 5px;
+	padding-left: 2em;
+	line-height: 1.5em;
+	text-align: left;
+}
+
+.tc-grid-content-border ul, .tc-grid-content-border ol{
+	font-size: 1.2rem;
+	color: var(--theme-text-color);
+	padding: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	padding-left: 2em;
 	line-height: 1.5em;
 	text-align: left;
@@ -336,6 +360,19 @@ body{
 	margin: 0;
 	justify-self: left; /* How the container should be arranged */
 	align-self: start;
+}
+
+.tc-grid-content-border{
+	width:100%;
+	padding: 0px;
+	margin: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	justify-self: left; /* How the container should be arranged */
+	align-self: start;
+	border-color: var(--nav-bg-color);
+	border: 2px solid #004D40;
+	border-radius: 0px;
 }
 
 .table-container {
@@ -531,6 +568,10 @@ body{
 /* Responsive Design */
 @media (max-width: 600px) {
 
+	html{
+		font-size: 93.75%; 
+	}
+
 	body {
 		padding-top: 65px; /* Adjust this value to match the height of the navigation bar */
 	}
@@ -589,3 +630,4 @@ body{
 	}
 
 }
+
