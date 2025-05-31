@@ -631,3 +631,32 @@ body{
 
 }
 
+/* Breadcrumbs */
+.breadcrumb {
+    background-color: #f2f2f2; /* Light gray background */
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #6a1b9a; /* Purple text color */
+    text-align: center;
+	animation: breadcrumb-marquee 30s linear infinite;
+
+}
+
+@keyframes breadcrumb-marquee {
+	0% { transform: translateX(100%); }
+	100% { transform: translateX(-100%); }
+}
+
+.breadcrumb a {
+    color: #6a1b9a; /* Purple text color */
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+	color: #6a1b9a; /* Purple text color */
+}
+
