@@ -262,7 +262,7 @@ body{
 	align-self: start;
 }
 
-.oc-grid-content h1, .tc-grid-content h1{
+.oc-grid-content h1, .tc-grid-content h1, .mc-grid h1{
 	font-size: 2.0rem;
 	color: var(--theme-heading-color);
 	padding-top: 20px;
@@ -638,7 +638,7 @@ body{
     font-size: 1em;
     color: #6a1b9a; /* Purple text color */
     text-align: center;
-	animation: breadcrumb-marquee 30s linear infinite;
+	animation: breadcrumb-marquee 20s linear infinite;
 
 }
 
@@ -648,7 +648,7 @@ body{
 }
 
 .breadcrumb a {
-    color: #6a1b9a; /* Purple text color */
+    color: #de0000; /* Purple text color */
     text-decoration: none;
 }
 
@@ -657,6 +657,40 @@ body{
 }
 
 .breadcrumb span {
-	color: #6a1b9a; /* Purple text color */
+	color: #de0000; /* Purple text color */
+}
+
+.mc-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+	grid-auto-rows: auto;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	padding: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	align-items: center;
+	justify-items: left;
+	justify-content: left;
+	background-color: #f9f9f9;
+	grid-gap: 30px;
+}
+
+.mc-grid-image{
+	width: auto;
+	max-width:100%;
+	object-fit: contain;
+	height: 80px; /* Fixed height for uniformity */
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s, box-shadow 0.3s;
+	background-color: #FFFFFF; /* Background color for images */
+	border: 1px solid #DDDDDD; /* Optional: Add a border for better visibility */
+	padding: 10px; /* Padding around the image */
+
+}
+.mc-grid-image:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
