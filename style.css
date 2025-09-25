@@ -299,14 +299,19 @@ body{
 
 .oc-grid-content h3, .tc-grid-content h3{
 	font-size: 1.25rem;
-	color: #000000;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 0px;
 	padding-right: 0px;
-	margin-top: 0px;
 	text-align: left;
 	text-decoration: underline;
+	margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #004D40;
+    cursor: pointer;
+	user-select: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.25rem;
 }
 
 .oc-grid-content p, .tc-grid-content p{
@@ -726,4 +731,18 @@ body{
 	transform: scale(1.05);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+.accordion-content {
+    display: none;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid #00796B;
+    color: #444;
+}
+
+.highlight {
+  color: #004D40; /* Deep teal */
+  font-weight: bold;
+}
+
 

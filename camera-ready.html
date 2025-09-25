@@ -1,121 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> ICPS 2025 </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>ICPS 2025 - Camera Ready Submission Guidelines</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
     <!-- Menu Bar -->
-    <script>
-        fetch('menu.html')  // Path to the menu.html file
-        .then(response => response.text())  // Fetch data from menu.html
-        .then(data => { // Place the fetched data into the file
-            document.getElementById('menu-container').innerHTML = data;  
-        })
-        .catch(error => console.error('Error loading the menu:', error));
-    </script>
     <div id="menu-container"></div>
-    
-    <div class="hero-nobg">
+    <script>
+        fetch('menu.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('menu-container').innerHTML = data)
+            .catch(e => console.error('Error loading the menu:', e));
+    </script>
+
+    <!-- Page Title -->
+     <div class="hero-nobg">
         <div class="page-title">
-            Camera-Ready Paper Submission Guidelines
+            <h2>Camera-Ready Paper Submission Guidelines</h2>
         </div>
     </div>
-
-    <!-- Contact Information-->
+    <!-- Content -->
     <div class="oc-grid">
-        <div class="oc-grid-content">  
-            <h1>Instructions for Submission of Camera Ready Paper</h1>
-            <p> To ensure that accepted papers are published in the conference proceedings and considered for inclusion in the <strong>IEEE Xplore Digital Library</strong>, authors are required to complete the following steps. The steps below provide an overview of the process; detailed instructions for each step follow afterward. </p>
-            <h2>Process Outline for Final Paper Submission</h2>
-            <ul>
-              <li><strong>Final Camera-Ready Paper Preparation:</strong> Prepare the final version of your paper according to the prescribed formatting guidelines. Make sure that the reviewer comments are addressed in the camera-ready version.</li>
-              <li><strong>Inclusion of IEEE Copyright Notice:</strong> Insert the official IEEE copyright notice in the footer of the first page of your paper.</li>
-              <li><strong>PDF eXpress Compliance Check:</strong> Validate your paper using IEEE PDF eXpress to confirm compatibility with IEEE Xplore requirements.</li>
-              <li><strong>Camera-Ready Paper Submission:</strong> Submit the PDF eXpress–verified camera-ready version of your paper through the submission portal.</li>
-              <li><strong>Copyright Form Submission:</strong> Complete and submit the IEEE Electronic Copyright Form (eCF).</li>
-              <li><strong>Author Registration:</strong> Ensure that at least one author registers for the conference with a full registration.</li>
-              <li><strong>Conference Presentation:</strong> At least one of the authors must present the paper at the conference. Papers not presented will not be forwarded for IEEE Xplore.</li>
-            </ul>
-            <h2>Detailed Instructions</h2>
-            <h3>Step 1: Final Camera-Ready Paper Preparation</h3>
-            <ul>
-              <li>Paper title and author order must remain unchanged in the final submission.</li>
-              <li>Papers must adhere to the IEEE two-column format. Please follow the IEEE two-column A4 size standard conference format. <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank">Download the IEEE template here</a>.</li>
-              <li>Revise your paper based on reviewers comments (available on the conference Microsoft CMT site).</li>
-              <li>Papers should not exceed six (6) A4 pages, including references.</li>
-              <li>The similarity index must be less than 15% (excluding references). See the <a href="https://www.ieee.org/publications/rights/plagiarism.html" target="_blank">IEEE Plagiarism Policy</a> for details.</li>
-              <li>Submit papers as a PDF file (max size: 3 MB).</li>
-            </ul>
-            <h3>Step 2: Inclusion of IEEE Copyright Notice</h3>
-            <p>Add the appropriate IEEE copyright notice to the bottom of the first page (leftmost column) of your paper. If you are unsure which notice to use, please contact <a href="mailto:rupesh@ee.iith.ac.in">Dr. Rupesh Wandhare</a>.</p>
-            <ul>
-              <li><strong>U.S. Government Authors:</strong> U.S. Government work not protected by U.S. copyright</li>
-              <li><strong>Crown Government (UK, Canada, Australia):</strong> 979-8-3315-5599-3/25/$31.00 ©2025 Crown</li>
-              <li><strong>European Union Authors:</strong> 979-8-3315-5599-3/25/$31.00 ©2025 European Union</li>
-              <li><strong>All Others:</strong> 979-8-3315-5599-3/25/$31.00 ©2025 IEEE</li>
-            </ul>
-            <h3>Step 3: PDF eXpress Check</h3>
-            <ul>
-              <li>Ensure your source document is final and requires no further revisions.</li>
-              <li>Log in to the <a href="https://ieee-pdf-express.org/" target="_blank">IEEE PDF eXpress</a> site. To create a PDF eXpress account, follow these steps:</li>
-            </ul>
-            <ul>
-              <li><strong>For First-Time Users:</strong>
-                <ul>
-                  <li>Click on “New Users - Click Here”.</li>
-                  <li>Enter the following:
-                    <ul>
-                      <li>Conference ID: <strong>67276X</strong></li>
-                      <li>Your email address</li>
-                      <li>A password of your choice</li>
-                    </ul>
-                  </li>
-                  <li>Continue entering information as prompted.</li>
-                  <li>You will see a confirmation online and receive an email verifying your account setup.</li>
-                </ul>
-              </li>
-              <li><strong>For Returning Users:</strong>
-                <ul>
-                  <li>Use the same email and password as previous conferences.</li>
-                  <li>Verify that your contact information is up to date.</li>
-                </ul>
-              </li>
-            </ul>
-            <h3>Step 4: Camera-Ready Paper Submission</h3>
-            <p> After your paper has successfully passed the IEEE PDF eXpress™ compliance check, submit the final camera-ready version through the Author Console in CMT. Before submitting, please ensure that:</p>
-            <ul>
-              <li>Rename the PDF eXpress–verified file to <strong>PIDxxx</strong> (where xxx is your paper ID in CMT) before uploading.</li>
-              <li>The paper title must remain unchanged from the original submission.</li>
-              <li>The author list and order must remain the same as the original submission.</li>
-            </ul>
-            <p> The CMT submission portal can be accessed here:</p>
-            <div class="hero-button-grid">
-              <button class="hero-button"><a href="https://cmt3.research.microsoft.com/icps2025" target="_blank">CMT Submission Portal</a></button>
-            </div>
-            <h3>Step 5: Submission of the Copyright Form</h3>
-            <p>Once the camera-ready paper is uploaded, complete the copyright transfer:</p>
-            <ol>
-              <li>In CMT, click on “Submit IEEE Copyright Form”.</li>
-              <li>Follow the link to the IEEE eCF website.</li>
-              <li>Complete and submit the IEEE Electronic Copyright Form.</li>
-              <li>Download the completed form and upload it into CMT.</li>
-            </ol>
-            <p class="note">Note: The corresponding author may submit the copyright form on behalf of all authors.</p>
-            <h3>Step 6: Author Registration</h3>
-            <p>
-              At least one author of each accepted paper must register with a full registration. 
-              Registration details are available at: 
-              <a href="https://icps2025.in/registration.html" target="_blank">https://icps2025.in/registration.html</a>
-            </p>
-            <h3>Step 7: Paper Presentation at the Conference</h3>
-            <p> Each accepted paper must be presented at the conference to be included in the proceedings and submitted to IEEE Xplore®. Detailed instructions for preparing presentations will be published on the conference website soon.</p>
-        </div>
-    </div>
-</body>
+      <div class="oc-grid-content">
+        <h1>Instructions for Submission of Camera Ready Paper</h1>
+        <p>To ensure that accepted papers are published in the conference proceedings and considered for inclusion in the <strong>IEEE Xplore Digital Library</strong>, authors are required to complete the steps outlined below. The detailed steps are organized into collapsible sections below. Simply click on each step's heading to expand or collapse the information as needed.</p>
 
+        <h2>Process Outline for Final Paper Submission</h2>
+        <p> The submission process consists of the following key steps. These steps provide an overview; please expand each section below for detailed instructions: </p>
+        <ul>
+            <li><strong>Final Camera-Ready Paper Preparation:</strong> Prepare the final version of your paper according to the prescribed formatting guidelines. Make sure that the reviewer comments are addressed in the camera-ready version.</li>
+            <li><strong>Inclusion of IEEE Copyright Notice:</strong> Insert the official IEEE copyright notice in the footer (left column) of the first page of your paper.</li>
+            <li><strong>PDF eXpress Compliance Check:</strong> Validate your paper using IEEE PDF eXpress to confirm compatibility with IEEE Xplore requirements.</li>
+            <li><strong>Camera-Ready Paper Submission:</strong> Submit the PDF eXpress-verified camera-ready version of your paper through the submission portal.</li>
+            <li><strong>Copyright Form Submission:</strong> Complete and submit the IEEE Electronic Copyright Form (eCF).</li>
+            <li><strong>Author Registration:</strong> Ensure that at least one author registers for the conference with a full registration.</li>
+            <li><strong>Conference Presentation:</strong> At least one of the authors must present the paper at the conference. Papers not presented will not be forwarded for IEEE Xplore.</li>
+        </ul>
+
+        <!-- Accordion for detailed steps -->
+        <h3 onclick="toggleAccordion(this)">Step 1: Final Camera-Ready Paper Preparation</h3>
+        <div class="accordion-content">
+            <p>Please adhere strictly to the IEEE conference format and address all reviewer comments in your submission.</p>
+            <ul>
+                <li>Paper title and author order must remain unchanged in the final submission.</li>
+                <li>Papers must adhere to the IEEE two-column format. Please follow the IEEE two-column A4 size standard conference format for preparing your final manuscript. Download the IEEE template <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">here</a>.</li>
+                <li>Revise your paper based on reviewers’ comments/suggestions. The reviewer’s comments are available on the conference Microsoft CMT site.</li>
+                <li>The final paper must not exceed six (6) pages including references.</li>
+                <li>Ensure the similarity index remains below 15%, excluding references, in accordance with the <a href="https://www.ieee.org/publications/rights/plagiarism.html" target="_blank" rel="noopener">IEEE Plagiarism Policy</a>.</li>
+                <li>Save your paper as a PDF file with a maximum size of 3 MB, and then proceed to the subsequent steps before submitting it to the CMT portal.</li>
+            </ul>
+        </div>
+
+        <h3 onclick="toggleAccordion(this)">Step 2: Inclusion of IEEE Copyright Notice</h3>
+        <div class="accordion-content">
+            <p>Please include the correct IEEE copyright notice at the bottom-left corner of the first page of your paper. The notice should match exactly as given below. If you are uncertain about which notice applies to you, please contact <a href="mailto:rupesh@ee.iith.ac.in">Dr. Rupesh Wandhare</a>.</p>
+            <ul>
+              <li>For papers in which <span class="highlight">all authors are employed by the US government</span>, the copyright notice is: <span class="highlight">U.S. Government work not protected by U.S. copyright</span>.</li>
+              <li>For papers in which <span class="highlight">all authors are employed by a Crown government (UK, Canada, and Australia)</span>, the copyright notice is: <span class="highlight">979-8-3315-5599-3/25/$31.00 ©2025 Crown</span>.</li>
+              <li>For papers in which <span class="highlight">all authors are employed by the European Union</span>, the copyright notice is: <span class="highlight">979-8-3315-5599-3/25/$31.00 ©2025 European Union</span>.</li>
+              <li>For <span class="highlight">all other papers</span> the copyright notice is: <span class="highlight">979-8-3315-5599-3/25/$31.00 ©2025 IEEE</span>.</li>
+            </ul>
+        </div>
+
+        <h3 onclick="toggleAccordion(this)">Step 3: PDF eXpress Check</h3>
+        <div class="accordion-content">
+            <p>The IEEE PDF eXpress tool is mandatory for validating that your paper meets IEEE digital library standards. Completing this step ensures your paper can be seamlessly archived and accessed.</p>
+            <ul>
+                <li>Confirm that your source document is final and requires no further edits before proceeding.</li>
+                <li>Visit the <a href="https://ieee-pdf-express.org/" target="_blank" rel="noopener">IEEE PDF eXpress website</a> to create or log in to your account.</li>
+                <li><strong>For first-time users:</strong> Register by selecting “New Users - Click Here” and enter the Conference ID: <strong>67276X</strong>, your email, and a secure password.</li>
+                <li><strong>Returning users:</strong> Log in with your existing credentials and verify your contact information is up to date.</li>
+                <li>Upload your PDF file to perform the compliance check and make necessary corrections if any errors are detected.</li>
+            </ul>
+        </div>
+
+        <h3 onclick="toggleAccordion(this)">Step 4: Camera-Ready Paper Submission</h3>
+        <div class="accordion-content">
+            <p>Once your paper passes the PDF eXpress compliance check, upload the final camera-ready PDF through the Author Console in the conference management tool (CMT).</p>
+            <ul>
+                <li>Rename your verified PDF to <strong>PIDxxx</strong> where <em>xxx</em> is your assigned paper ID in CMT.</li>
+                <li>Ensure the paper title, author names, and order remain unchanged from your original submission.</li>
+            </ul>
+            <p>Access the CMT submission portal using the button below:</p>
+            <button class="hero-button"><a href="https://cmt3.research.microsoft.com/icps2025" target="_blank" rel="noopener">CMT Submission Portal</a></button>
+        </div>
+
+        <h3 onclick="toggleAccordion(this)">Step 5: Submission of the Copyright Form</h3>
+        <div class="accordion-content">
+            <p>Once you have uploaded the camera-ready paper (verified through IEEE PDF eXpress), complete the copyright transfer process.</p>
+            <ol>
+                <li>In CMT, click on “Submit IEEE Copyright Form” to open the Copyright Form Submission page.</li>
+                <li>Follow the link to the IEEE eCF website and complete the form online.</li>
+                <li>Download the completed form and upload it back into the CMT portal.</li>
+            </ol>
+            <p class="note">Note: The corresponding author may submit the copyright form on behalf of all co-authors.</p>
+        </div>
+
+        <h3 onclick="toggleAccordion(this)">Step 6: Author Registration</h3>
+        <div class="accordion-content">
+            <p>At least one author from each accepted paper must register for the conference with a full registration to ensure inclusion in the proceedings.</p>
+            <p>Registration details and deadlines can be found here: <a href="https://icps2025.in/registration.html" target="_blank" rel="noopener">https://icps2025.in/registration.html</a></p>
+        </div>
+
+        <h3 onclick="toggleAccordion(this)">Step 7: Paper Presentation at the Conference</h3>
+        <div class="accordion-content">
+            <p>Presentation of your accepted paper at the conference is mandatory to ensure its inclusion in the proceedings and submission to IEEE Xplore for potential indexing.</p>
+            <p>Presentation guidelines will be posted on the conference website shortly.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+</body>
 <footer class="footer-grid">
     <div class="footer-content">
         &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.

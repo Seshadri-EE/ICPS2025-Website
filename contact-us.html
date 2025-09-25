@@ -30,19 +30,32 @@
             <h2>Get in Touch</h2>
             <p>If you have any questions or require further clarification regarding ICPS 2025, please feel free to reach out to us. Our team will be pleased to provide the necessary support.</p>
 
-            <h3>General Chair</h3>
-            <p><strong>Prof. Ravikumar Bhimasingu</strong><br>
-            Department of Electrical Engineering, IIT Hyderabad<br>
-            Email: <a href="mailto:chair@icps2025.in">chair@icps2025.in</a></p>
+            <h3 onclick="toggleAccordion(this)">General Chair</h3>
+            <div class="accordion-content">
+              <p><strong>Prof. Ravikumar Bhimasingu</strong><br>
+              Department of Electrical Engineering, IIT Hyderabad<br>
+              Email: <a href="mailto:chair@icps2025.in">chair@icps2025.in</a></p>
+            </div>
 
-            <h3>For General Inquiries</h3>
-            <p>If you have any general inquiries about the conference, please contact us at:</p>
-            <p>Email: <a href="mailto:icps2025@ee.iith.ac.in">icps2025@ee.iith.ac.in</a></p>
+            <h3 onclick="toggleAccordion(this)">For General Inquiries</h3>
+            <div class="accordion-content">
+              <p>If you have any general inquiries about the conference, please contact us at:</p>
+              <p>Email: <a href="mailto:icps2025@ee.iith.ac.in">icps2025@ee.iith.ac.in</a></p>
+            </div>
 
-            <h3>Organizing Institute</h3>
-            <p><strong>Address:</strong> Department of Electrical Engineering, IIT Hyderabad, India</p>
+            <h3 onclick="toggleAccordion(this)">Organizing Institute</h3>
+            <div class="accordion-content">
+              <p><strong>Address:</strong> Department of Electrical Engineering, IIT Hyderabad, India</p>
+            </div>
         </div>
     </div>
+    <script>
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
 </body>
 
 <footer class="footer-grid">
