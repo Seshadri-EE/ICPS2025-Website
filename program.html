@@ -1,41 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> ICPS 2025 </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>ICPS 2025 – Keynotes & Tutorials</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <!-- Menu Bar -->
-    <script>
-        fetch('menu.html')  // Path to the menu.html file
-        .then(response => response.text())  // Fetch data from menu.html
-        .then(data => { // Place the fetched data into the file
-            document.getElementById('menu-container').innerHTML = data;  
-        })
-        .catch(error => console.error('Error loading the menu:', error));
-    </script>
+
+    <!-- Menu -->
     <div id="menu-container"></div>
-    
+    <script>
+        fetch('menu.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('menu-container').innerHTML = data);
+    </script>
+
+    <!-- Page Title -->
     <div class="hero-nobg">
-        <div class="page-title">
-            ICPS 2025 program
+        <div class="page-title">Keynote Speakers & Tutorial Sessions</div>
+    </div>
+
+    <!-- Content -->
+    <div class="oc-grid">
+        <div class="oc-grid-content">
+
+            <h1>Overview</h1>
+
+            <p>
+                ICPS 2025 will feature distinguished keynote speakers as well as insightful tutorial sessions 
+                delivered by leading experts in power systems, smart grids, renewable integration, cyber-physical 
+                systems, and related areas.
+            </p>
+
+            <p>
+                Titles of keynote talks are being finalized and will be updated very soon. 
+                Tutorial information including speaker details and abstracts is provided below.
+            </p>
+
+            <!-- -------------------- KEYNOTE SECTION -------------------- -->
+            <button class="accordion">Keynote Speakers (Tentative)</button>
+            <div class="panel">
+
+                <!-- SAMPLE KEYNOTE ENTRY -->
+                <div class="speaker-card">
+                    <img src="images/Samir.jpeg" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Shri. Samir Saxena</div>
+                        <div class="speaker-affiliation">Chairman & Managing Director, Grid Controller of India</div>
+                        <div class="speaker-title">Title to be announced</div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Shri. Vamsi Rama Mohan Burra</div>
+                        <div class="speaker-affiliation">Director (Projects), PowerGrid</div>
+                        <div class="speaker-title">Title to be announced</div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Shri. Aneesh Sekhar (IAS)</div>
+                        <div class="speaker-affiliation">MD, Tamil Nadu Green Energy Corporation</div>
+                        <div class="speaker-title">To be announced</div>
+                    </div>
+                </div>
+
+
+                <div class="speaker-card">
+                    <img src="images/Joydeep.png" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Prof. Joydeep Mitra</div>
+                        <div class="speaker-affiliation">MSU Foundation Professor, Michigan State University, USA</div>
+                        <div class="speaker-title">Energy Storage as a Part of the Green Portfolio</div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Dr. Soonee Sushil Kumar</div>
+                        <div class="speaker-affiliation">Former and founder CEO POSOCO, now Grid-India; Retd</div>
+                        <div class="speaker-title">To be announced</div>
+                    </div>
+                </div>
+
+
+                <div class="speaker-card">
+                    <img src="images/Palak.jpg" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Dr. Palak Parikh</div>
+                        <div class="speaker-affiliation">Senior Engineer-Power System, Vernova Research Center, GE Vernova, Canada</div>
+                        <div class="speaker-title">Strain to Synergy : Powering the NextGen Data Centers</div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Shri Dillip Kumar Guru</div>
+                        <div class="speaker-affiliation">EVP (Energy and ESG), Sify Technologies Limited., Singapore (Data Centre)</div>
+                        <div class="speaker-title">To be announced</div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <button class="accordion">Tutorial Sessions</button>
+            <div class="panel">
+
+                <div class="speaker-card">
+                    <img src="" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Prof. Abhijit Abhyankar, IIT Delhi</div>
+                        <div class="speaker-affiliation">Indian Institute of Technology, Delhi</div>
+                        <div class="speaker-title">To be announced</div>
+                        <div class="speaker-abstract">
+                            To be announced.
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img src="" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Dr. Kaliappan Perumal</div>
+                        <div class="speaker-affiliation">Additional Director, CPRI</div>
+                        <div class="speaker-title">To be announced</div>
+                        <div class="speaker-abstract">
+                            To be announced.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="images/Gurunath.png" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Dr. Gurunath Gurrala, IISc Bangalore</div>
+                        <div class="speaker-affiliation">Indian Institute of Science, Bangalore</div>
+                        <div class="speaker-title">Parallel programming for Large Power system studies</div>
+                        <div class="speaker-abstract">
+                            Introduction to parallel computing, Different memory models in parallel programming, Introduction to shared memory paradigm using OpenMp, Matrix-Matrix multiplication using OpenMp, Load flow studies in power system, Parallel load flow using OpenMP.
+
+                            <strong>Note: </strong> Should bring your own laptop with minimum 8GB ram. Windows or linux.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="images/Mittal.jpg" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Dr. Mital Kanabar</div>
+                        <div class="speaker-affiliation">PowerProfs Inc., Markham, Ontario, Canada</div>
+                        <div class="speaker-title">Industry Experiences in Accelerating Open Innovation and Cyber Resilience for the Digital Power Grid </div>
+                        <div class="speaker-abstract">
+                            Digital transformation of the electric power grid is essential to accelerate open innovation with data-driven AI to support the energy transition. Yet the power grid continues to face slow innovation cycles driven by proprietary vendor ecosystems, hardware-defined grid automations, and restricted access to secure, high-quality operational data. These limitations hinder experimentation, complicate integration of advanced analytics, and reinforce long-term technology lock-in.
+
+                            At the same time, cybersecurity risks are intensifying on the current digital implementations. Recent power-grid cyber attacks demonstrated how power substation components—including protection relays, HMIs, engineering workstations, and remote access channels—can be compromised through structured attack chains.
+
+                            From several years of industry experience, it is proposed to build open-innovation (non-proprietary) and cyber-resilient solutions considering the use-case of IEC 61850-based digital substations. This session provides a focused examination of: (1) why adoption in digital substations remains slow; (2) where cyber vulnerabilities persist today; and (3) how real-world attack scenarios map to known adversarial techniques (explained using MITRE ATT&CK framework). The session then provides a real-world case-study on open innovation demonstration—supported by open-source frameworks (e.g., Linux Foundation Energy) for the virtualized or software-defined substation automation solutions.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="images/Sarasij.jpg" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Dr. Sarasij Das, IISc Bangalore</div>
+                        <div class="speaker-affiliation">Indian Institute of Science, Bangalore</div>
+                        <div class="speaker-title">Cyber Security in Digital Substations</div>
+                        <div class="speaker-abstract">
+                            Increasing digitization is making substations more vulnerable to cyber attacks. In this tutorial, at first, I'll discuss the IEC 61850 based architecture of digital substations. Then, various types of cyber attacks possible in a digital substation with some real life experiences will be shared. Finally, cyber security measures suggested by IEC 62351 and IEC 62443 will be discussed.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="images/Balakrishna.jpg" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Dr. Pamulaparthy Balakrishna</div>
+                        <div class="speaker-affiliation">GE Vernova</div>
+                        <div class="speaker-title">AI and the Future Grid: How Power Engineers Can Lead the Next Technological Transformation</div>
+                        <div class="speaker-abstract">
+                            The electric power grid is undergoing an unprecedented transformation driven by the convergence of digitalization, decentralization, and decarbonization. Artificial Intelligence (AI) has emerged as a pivotal enabler of this evolution, empowering utilities, and industries to achieve higher levels of reliability, efficiency, and resilience. This talk explores how AI is reshaping the architecture, operation, and management of modern power systems—spanning applications across transmission and distribution of power grids. Beyond technology, it emphasizes the evolving role of power engineers as leaders in data-driven decision-making, system modelling/analysis, and cyber-physical integration with a detailed case study on one of the key problem statements. By blending domain expertise with AI literacy, power engineers can guide the transition toward an intelligent, explainable, and responsible solutions for utilities and industries. Ultimately, it argues that the next technological transformation in the grid sector will succeed not merely through innovation in AI algorithms or technology, but through the adaptability of the power engineers along with domain skillsets who implement them.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="images/Ramakrishna.jpg" class="speaker-photo" alt="Speaker photo">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Dr. Ramakrishnan Maheswari</div>
+                        <div class="speaker-affiliation">University of Southern Denmark, Denmark</div>
+                        <div class="speaker-title">Small DC-link capacitor-based power converter topologies and related issues.</div>
+                        <div class="speaker-abstract">
+                            Power electronics converters are essential to the green energy transition. Therefore, the penetration of power converters for various applications is increasing, and they are required to meet regulatory requirements. These requirements affect the size of the active and passive components used in the converter. The first part of the tutorial addresses the requirement for the design of the converter and how it affects the selection of the passive components. These components are the main factor that decides the size, weight, and volume of the drive. They may typically contribute to 75% of the weight and volume of the converter. For these converters, the DC-link capacitor is the major contributor among the passive components. To reduce the size of converters, a reduction in the value of DC-link capacitance is an alternative. Such alternate converters can be classified as small DC-link capacitor-based power converters. The second part of the tutorial focuses on conventional power converter topologies (two-level and three-level converters) with small DC-link capacitors and related issues such as negative impedance instability and mid-point voltage balance in the three-level converter. Furthermore, the tutorial also discusses some small DC-link capacitor-based power converter topologies that utilize current injection circuits for grid-connected applications. These converters have the advantage of high efficiency and high power density. The main target audience for the tutorial is active researchers, PhD students, and working professionals from the industry in power electronics converters for electric drives. However, the topics will be presented in a way that the fundamentals can be applied to other AC-DC power converter applications as well.
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- Contact Information-->
-    <div class="oc-grid">
-        <div class="oc-grid-content">  
-            <h2> Conference Program Overview </h2>          
-            <p>The <strong>ICPS 2025 Conference Program</strong> will feature a mix of engaging technical sessions, insightful keynote addresses, and thought-provoking panel discussions. As we continue to finalize the details, the program will be updated in due course with more information on session timings, speakers, and topics. </p>
-        </div>
-    </div>
 </body>
 
 <footer class="footer-grid">
     <div class="footer-content">
-        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+        &copy; 2025 ICPS. All rights reserved. | Organized by the Department of Electrical Engineering, IIT Hyderabad.
     </div>
 </footer>
+
+<script>
+    // Accordion behavior
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            panel.style.display = (panel.style.display === "block") ? "none" : "block";
+        });
+    }
+</script>
+
 </html>

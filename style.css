@@ -764,4 +764,121 @@ body{
   font-weight: bold;
 }
 
+/* Speaker Card Wrapper */
+.speaker-card {
+    display: flex;
+    gap: 20px;
+    background-color: #ffffff;
+    border-left: 6px solid var(--nav-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.speaker-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Speaker Photo */
+.speaker-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+/* Speaker Text Section */
+.speaker-details {
+    flex: 1;
+}
+
+/* Name Uses Heading Styling */
+.speaker-name {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--theme-heading-color);
+}
+
+/* Speaker Title */
+.speaker-title {
+    margin-top: 1.3rem;
+    font-size: 1.1rem; /* reduced from 1.25rem */
+    font-weight: 700;
+    color: var(--nav-bg-color);
+}
+
+/* Affiliation */
+.speaker-affiliation {
+    font-size: 1.0rem;
+    color: #444;
+    margin-top: 6px;
+    font-style: italic; /* italicized */
+}
+
+
+/* Abstract Text */
+.speaker-abstract {
+    margin-top: 14px;
+    font-size: 1.15rem;
+    line-height: 1.6em;
+    color: var(--theme-text-color);
+    text-align: justify;
+}
+
+/* Accordion Button */
+.accordion {
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    transition: background-color 0.2s ease;
+}
+
+.accordion:hover {
+    background-color: var(--nav-hoover-bg-color);
+}
+
+/* Accordion Panel */
+.panel {
+    display: none;
+    padding: 15px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .speaker-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .speaker-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .speaker-details {
+        text-align: center;
+    }
+}
+
+/* Ensures each <h2> and its content are on a new line */
+.mc-grid h2 {
+    display: block; /* Ensure h2 behaves as a block element (default) */
+    margin-top: 20px; /* Adds space above each category */
+    margin-bottom: 10px; /* Adds space below each category */
+    border-bottom: 2px solid #009688; /* Optional: Line separator */
+    padding-bottom: 10px; /* Space between text and line */
+}
+
 
