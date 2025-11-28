@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ICPS 2025 – Presentation Guidelines</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Menu Bar -->
+    <div id="menu-container"></div>
+    <script>
+        fetch('menu.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('menu-container').innerHTML = data)
+            .catch(e => console.error('Error loading the menu:', e));
+    </script>
+
+    <!-- Page Title -->
+    <div class="hero-nobg">
+        <div class="page-title">
+            Presentation Guidelines
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="oc-grid">
+        <div class="oc-grid-content">
+
+            <h1>Instructions for Paper & Poster Presentations</h1>
+            <p>
+                This page provides essential guidelines for authors presenting their work at <strong>ICPS 2025</strong>. 
+                Please read the instructions carefully and complete the presentation upload before the deadline.
+            </p>
+
+            <h2>Overview</h2>
+            <ul>
+                <li>All accepted papers must be presented at ICPS 2025 to be eligible for IEEE Xplore submission.</li>
+                <li>Authors must upload the final <strong>presentation PDF</strong> using the form linked below.</li>
+                <li>Poster presenters are required to bring a <strong>printed poster</strong> (A0 size). No upload required.</li>
+            </ul>
+
+            <!-- Accordion 1 -->
+            <h3 onclick="toggleAccordion(this)">Step 1: Oral Presentation Guidelines</h3>
+            <div class="accordion-content">
+                <p>Oral presentations at ICPS 2025 follow a tightly managed schedule. Please review the guidelines below to ensure a smooth and timely session:</p>
+                <ul>
+                    <li><strong>Total duration:</strong> 15 minutes</li>
+                    <li><strong>Presentation time:</strong> 12 minutes</li>
+                    <li><strong>Q&A:</strong> 3 minutes</li>
+                    <li><strong>PDF is the preferred format</strong> for all presentation uploads. If you prepare your slides in PPT/PPTX, please convert them to <strong>PDF</strong> before submission.</li>
+                    <li>The maximum file size allowed is <strong>10 MB</strong>. Compress the PDF if needed.</li>
+                </ul>
+            </div>
+
+            <!-- Accordion 2 -->
+            <h3 onclick="toggleAccordion(this)">Step 2: Oral and Poster Presentation templates</h3>
+            <div class="accordion-content">
+                <p>Authors may optionally use the official ICPS 2025 presentation template:</p>
+                <button class="hero-button1" style="margin-bottom: 20px;">
+                    <a href="docs/ICPS-2025-Oral-Presentation-Template.pptx" target="_blank" rel="noopener">
+                        Download Oral Presentation Template
+                    </a>
+                </button>
+                <button class="hero-button1" style="margin-bottom: 20px;">
+                    <a href="docs/ICPS-2025-Poster-Presentation-Template.pptx" target="_blank" rel="noopener">
+                        Download Poster Presentation Template
+                    </a>
+                </button>
+            </div>
+
+            <!-- Accordion 3 -->
+            <h3 onclick="toggleAccordion(this)">Step 3: Uploading Your Final Presentation (Needed only for oral presentations)</h3>
+            <div class="accordion-content">
+                <p>Please upload the final PDF version of your oral presentation using the link below:</p>
+
+                <button class="hero-button1" style="margin-bottom: 20px;">
+                    <a href="https://forms.gle/hNHxW2zbgbDcWQ1F9" target="_blank" rel="noopener">
+                        Upload Presentation (Google Form)
+                    </a>
+                </button>
+                <p><strong>Upload Deadline:</strong> 5 December 2025</p>
+                <p class="note">No modifications will be accepted after the deadline.</p>
+            </div>
+
+            <!-- Accordion 4 -->
+            <h3 onclick="toggleAccordion(this)">Step 4: Poster Presentation Guidelines</h3>
+            <div class="accordion-content">
+                <p>Poster presenters must bring a printed poster to the conference.</p>
+                <ul>
+                    <li><strong>No online upload</strong> is required for posters.</li>
+                    <li>Poster boards support <strong>A0 size</strong> (841 × 1189 mm) in portrait orientation.</li>
+                    <li>Please ensure high-quality printing with readable fonts and clear visuals.</li>
+                </ul>
+            </div>
+
+            <!-- Accordion 5 -->
+            <h3 onclick="toggleAccordion(this)">Additional Notes</h3>
+            <div class="accordion-content">
+                <ul>
+                    <li>Volunteers will be available at each session room to assist presenters.</li>
+                    <li>Presentation files for oral sessions will be loaded onto the room computer before the session starts.</li>
+                    <li>It is recommended to test your slides during the break before your session.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+
+<footer class="footer-grid">
+    <div class="footer-content">
+        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+    </div>
+</footer>
+
+</html>
