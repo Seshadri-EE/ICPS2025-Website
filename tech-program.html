@@ -1,111 +1,590 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> ICPS 2025 </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <title>ICPS 2025 — Technical Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Minimal color-coded left borders */
+        .session-tutorial { border-left: 4px solid #5aa0e6; }
+        .session-break { border-left: 4px solid #c8c8c8; }
+        .session-inaugural { border-left: 4px solid #8E75FF; }
+        .session-keynote { border-left: 4px solid #4db6ac; }
+        .session-social { border-left: 4px solid #d4b35c; }
+
+        /* Gentle padding so the color strip looks intentional */
+        .table-format td {
+            padding-left: 12px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Menu Bar -->
+
+    
+
+    <!-- Menu loader -->
     <script>
-        fetch('menu.html')  // Path to the menu.html file
-        .then(response => response.text())  // Fetch data from menu.html
-        .then(data => { // Place the fetched data into the file
-            document.getElementById('menu-container').innerHTML = data;  
-        })
-        .catch(error => console.error('Error loading the menu:', error));
+        fetch('menu.html')
+            .then(r => r.text())
+            .then(d => document.getElementById('menu-container').innerHTML = d)
+            .catch(() => {/* fail silently */});
     </script>
     <div id="menu-container"></div>
-    
+
+    <!-- Hero -->
     <div class="hero-nobg">
-        <div class="page-title">
-            Conference Program
-        </div>
+        <div class="page-title">Technical Program — ICPS 2025</div>
     </div>
 
     <div class="oc-grid">
         <div class="oc-grid-content">
-            <h1>Program Overview</h1>
-            <p>
-                The ICPS 2025 program is designed to bring together experts, researchers, and practitioners 
-                across the power systems community. Over three days, participants will experience a blend of 
-                tutorials, keynote lectures, technical paper presentations, industry interactions, and cultural events.
-            </p>
+            <h2>Program at a glance</h2>
+            <p> The ICPS 2025 Technical Program spans over three-day program and features a structured blend of tutorials, keynote lectures, parallel paper sessions, poster presentations, and thematic discussions spanning multiple tracks within power systems, power electronics, optimization, data analytics, and emerging technologies. </p>
+            <div class="hero-button-grid" style="margin-top: 10px; margin-bottom: 20px;">
+                <button class="hero-button" style="width: 275px; height: 50px">
+                    <a href="docs/ICPS-Overall-Schedule.pdf" target="_blank">
+                        Program Overview
+                    </a>
+                </button>
 
-            <!-- Notice Box -->
-            <div style="
-                background-color:#E8F5E9;
-                border-left:6px solid var(--nav-bg-color);
-                padding:15px 18px;
-                border-radius:4px;
-                margin:25px 0;">
-                <strong>Important:</strong>  
-                <span style="color:#1B5E20;">
-                    The schedule below is <strong>tentative</strong> and is subject to revisions.  
-                    Detailed session-level information — including presentation timings, room allocations, 
-                    and speaker lists — will be updated on this page very soon.
-                </span>
+                <button class="hero-button" style="width: 450px; height: 50px">
+                    <a href="docs/ICPS-Schedule.pdf" target="_blank">
+                        Session-wise Schedule
+                    </a>
+                </button>
             </div>
 
-            <h2>Day-wise Conference Schedule (Tentative)</h2>
-            <p><em>This is a high-level overview. Specific session details will be added shortly.</em></p>
+            <div style="background-color:#E8F5E9; border-left:6px solid var(--nav-bg-color); padding:15px 18px; border-radius:4px; margin:15px 0;"> <strong>Note:</strong> <span style="color:#1B5E20;"> This is the tentative technical program. Room/venue allocation and final timing updates will follow. <br><br> <strong>Paper placement details</strong> for all oral and poster sessions are provided in the <em>Paper Session Allocation</em> table at the end of this page.</span></div>
 
-            <!-- Table -->
-            <div class="table-container">
-                <table class="table-format">
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th>Date</th>
-                            <th>Forenoon (FN)</th>
-                            <th>Afternoon (AN)</th>
-                            <th>Evening</th>
-                        </tr>
-                    </thead>
+            <button class="accordion">Day 1 — 07 December 2025 (Tutorials, Inaugural & Keynotes)</button>
+            <div class="panel" style="padding-left: 20px">
+                <p> The complete details related to Keynote talks and Tutorial sessions including speaker profiles and abstracts can be accessed <a href="program.html">here</a>. </p>
+                <div class="table-container" style="font-size: 0.9rem;">
+                    <table class="table-format">
+                        <thead>
+                            <tr> <th style="width: 18%;">Time</th> <th style="width: 22%;">Session</th> <th>Details</th> </tr>
+                        </thead>
 
+                        <tbody>
+                            <tr> <td><strong>08:00 - 09:00</strong></td> <td>Registration</td> <td>Registration & Breakfast</td> </tr>
+                            <tr> <td><strong>09:00 - 10:30</strong></td> <td style="background-color: #5A9CE0; color: #ffffff;">Tutorial Session 1 & 2</td> <td style="line-height: 1.5;">
+                                    <strong>Tutorial 1:</strong> Dr. Kaliappan Perumal (Additional Director, CPRI) <br>
+                                    <strong>Tutorial 2:</strong> Dr. Gurunath Gurrala (IISc) 
+                                </td>
+                            </tr>
+                            <tr> <td><strong>10:30 - 10:45</strong></td> <td>Break</td> <td>Tea Break</td> </tr>
+                            <tr> <td><strong>10:45 - 12:15</strong></td> <td style="background-color: #5A9CE0; color: #ffffff;">Tutorial Session 3 & 4</td> <td style="line-height: 1.5;">
+                                    <strong>Tutorial 3:</strong> Prof. Abhijit Abhyankar (IIT Delhi) <br>
+                                    <strong>Tutorial 4:</strong> Dr. Gurunath Gurrala (IISc)
+                                </td>
+                            </tr>
+                            <tr> <td><strong>12:15 - 13:15</strong></td> <td>Lunch</td> <td>Lunch Break</td> </tr>
+                            <tr>
+                                <td><strong>13:15 - 14:45</strong></td> <td style="background-color: #5A9CE0; color: #ffffff;">Tutorial Session 5 & 6</td> <td style="line-height: 1.5;">
+                                    <strong>Tutorial 5:</strong> Dr. Mital Kanabar (Canada) <br>
+                                    <strong>Tutorial 6:</strong> Dr. Sarasij Das (IISc)
+                                </td>
+                            </tr>
+                            <tr> <td><strong>14:45 - 15:00</strong></td> <td>Break</td> <td>Tea Break</td> </tr>
+                            <tr><td><strong>15:00 - 16:30</strong></td> <td style="background-color: #5A9CE0; color: #ffffff;">Tutorial Session 7 & 8</td> <td style="line-height: 1.5;">
+                                    <strong>Tutorial 7:</strong> Dr. Balakrishna Pamulaparthy (GE Vernova) <br>
+                                    <strong>Tutorial 8:</strong> Prof. Ramakrishnan Maheswari (IMEE, University of Southern Denmark)
+                                </td>
+                            </tr>
+                            <tr> <td><strong>16:30 - 16:45</strong></td> <td>Buffer</td> <td>Session Buffer</td> </tr>
+                            <tr> <td><strong>16:45 - 17:45</strong></td> <td style="background-color: #415A9B; color: #ffffff;">Inaugural</td> <td><strong>Inaugural Function</strong> of the 11th International Conference on Power Systems (ICPS 2025)</td> </tr>
+                            <tr> <td><strong>17:45 - 18:45</strong></td> <td style="background-color: #8E75FF; color: #ffffff;">Keynote 1</td> <td> <strong>Inaugural Keynote:</strong> Shri Samir Saxena, CMD, Grid Controller of India</td> </tr>
+                            <tr> <td><strong>18:45 - 19:00</strong></td> <td>Welcome Drinks</td> <td>Networking & Welcome Drinks</td> </tr>
+                            <tr> <td><strong>19:00 - 20:00</strong></td> <td style="background-color: #4db6ac; color: #ffffff;">Awards Ceremony</td> <td> Hingorani Awards & GIPSA Awards Ceremony </td> </tr>
+                            <tr> <td><strong>20:00 - 21:00</strong></td> <td>Dinner</td> <td>Inaugural Conference Dinner</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="accordion">Day 2 — 08 December 2025 (Keynotes, Oral and Poster Presentations and Special Session)</button>
+            <div class="panel" style="padding-left: 20px">
+                <p> The complete details related to Keynote talks including speaker profiles and abstracts can be accessed <a href="program.html">here</a>. </p> 
+                <div class="table-container" style="font-size: 0.9rem;">
+                    <table class="table-format">
+                        <thead>
+                            <tr> <th style="width: 18%;">Time</th> <th style="width: 22%;">Session</th> <th>Details</th> </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr> <td><strong>08:00 - 09:00</strong></td> <td>Registration</td> <td>Registration & Breakfast</td> </tr>
+                            <tr> <td><strong>09:00 - 10:30</strong></td> <td style="background-color: #C58F5C; color: #ffffff;">Paper Sessions 1 to 6</td> <td style="line-height: 1.5;"> 
+                                    <strong>Parallel Paper Sessions 1 to 6:</strong> Oral Presentations on various topics across multiple tracks.
+                                </td>
+                            </tr>
+                            <tr> <td><strong>10:30 - 10:45</strong></td> <td>Break</td> <td>Tea Break</td> </tr>
+                            <tr> <td><strong>10:45 - 11:45</strong></td> <td style="background-color: #8E75FF; color: #ffffff;">Keynote 2</td> <td>
+                                    <strong>Keynote 2:</strong> Shri. Vamsi Rama Mohan Burra, Director (Projects), PowerGrid </td>
+                            </tr>
+                            <tr> <td><strong>11:45 - 12:00</strong></td> <td>Buffer</td> <td>Session Buffer</td> </tr>
+                            <tr> <td><strong>12:00 - 13:00</strong></td> <td style="background-color: #8E75FF; color: #ffffff;">Keynote 3</td> <td>
+                                    <strong>Keynote 3:</strong> Prof. Mohammad Rihan, Director General of National Institute of Solar Energy (NISE), MNRE, Government of India. </td>
+                            </tr>
+                            <tr> <td><strong>13:00 - 14:00</strong></td> <td>Lunch</td> <td>Lunch Break</td> </tr>
+                            <tr> <td><strong>14:00 - 15:00</strong></td> <td style="background-color: #8E75FF; color: #ffffff;">Keynote 4</td> <td>
+                                    <strong>Keynote 4:</strong> Prof. Joydeep Mitra, MSU Foundation Professor, Michigan State University, USA </td>
+                            </tr>
+                            <tr> <td><strong>15:00 - 16:00</strong></td> <td style="background-color: #8E75FF; color: #ffffff;">Keynote 5</td> <td>
+                                    <strong>Keynote 5:</strong> Dr. Soonee Sushil Kumar, Former and founder CEO POSOCO, now Grid-India; Retd, </td>
+                            </tr>
+                            <tr> <td><strong>16:00 - 16:15</strong></td> <td>Break</td> <td>Tea Break</td> </tr>
+                            <tr><td><strong>16:15 - 17:45</strong></td> <td style="background-color: #E0A840; color: #ffffff;">Poster Session</td> <td style="line-height: 1.5;">
+                                    <strong>Poster Presentations:</strong> Interactive poster session covering diverse research topics.
+                                </td>
+                            </tr>
+                            <tr> <td><strong>17:45 - 18:45</strong></td> <td style="background-color: #42BDA8; color: #ffffff;">Special Session</td> <td><strong>Special Session:</strong> Bringing Together Perspective from India and neighbouring countries on the future of system operation and cross-border cooperation.</td> </tr>
+                            <tr> <td><strong>18:45 - 19:00</strong></td> <td>Buffer</td> <td>Session Buffer</td> </tr>
+                            <tr> <td><strong>19:00 - 20:00</strong></td> <td style="background-color: #7A6F77; color: #ffffff;">Cultural Event</td> <td> Cultural Event (TBA) </td> </tr>
+                            <tr> <td><strong>20:00 - 21:00</strong></td> <td  style="background-color: #7A6F77; color: #ffffff;"> Gala Dinner</td> <td> Gala Dinner</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="accordion">Day 3 — 09 December 2025 (Keynotes, Oral Presentations,  Women in Engineering and Industrial Panel Discussion sessions)</button>
+            <div class="panel" style="padding-left: 20px">
+                <p> The complete details related to Keynote talks including speaker profiles and abstracts can be accessed <a href="program.html">here</a>. </p>
+                <div class="table-container" style="font-size: 0.9rem;">
+                    <table class="table-format">
+                        <thead>
+                            <tr> <th style="width: 18%;">Time</th> <th style="width: 22%;">Session</th> <th>Details</th> </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr> <td><strong>08:00 - 09:00</strong></td> <td>Registration</td> <td>Registration & Breakfast</td> </tr>
+                            <tr> <td><strong>09:00 - 10:30</strong></td> <td style="background-color: #C58F5C; color: #ffffff;">Paper Sessions 7 to 12</td> <td style="line-height: 1.5;"> 
+                                    <strong>Parallel Paper Sessions 7 to 12:</strong> Oral Presentations on various topics across multiple tracks.
+                                </td>
+                            </tr>
+                            <tr> <td><strong>10:30 - 10:45</strong></td> <td>Break</td> <td>Tea Break</td> </tr>
+                            <tr> <td><strong>10:45 - 11:45</strong></td> <td style="background-color: #8E75FF; color: #ffffff;">Keynote 6</td> <td>
+                                    <strong>Keynote 6:</strong> Dr. Palak Parikh Kanabar (Canada), GE Grid Solutions, Canada </td>
+                            </tr>
+                            <tr> <td><strong>11:45 - 12:00</strong></td> <td>Buffer</td> <td>Session Buffer</td> </tr>
+                            <tr> <td><strong>12:00 - 13:00</strong></td> <td style="background-color: #42BDA8; color: #ffffff;">Special Session (WIE)</td> <td>
+                                    <strong>Special Session:</strong> Woman in Engineering (WIE) </td>
+                            </tr>
+                            <tr> <td><strong>13:00 - 14:00</strong></td> <td>Lunch</td> <td>Lunch Break</td> </tr>
+                            <tr> <td><strong>14:00 - 15:00</strong></td> <td style="background-color: #8E75FF; color: #ffffff;">Keynote 7</td> <td>
+                                    <strong>Keynote 7:</strong> Shri Dillip Kumar Guru, EVP (Energy and ESG), Sify Technologies Limited., Singapore (Data Centre) </td>
+                            </tr>
+                            <tr> <td><strong>13:00 - 14:00</strong></td> <td style="background-color: #42BDA8; color: #ffffff;">Special Session (IPD)</td> <td>
+                                    <strong>Special Session:</strong> Industrial Panel Discussion (IPD) </td>
+                            </tr>
+                            <tr> <td><strong>16:00 - 16:15</strong></td> <td>Break</td> <td>Tea Break</td> </tr>
+                            <tr><td><strong>16:15 - 17:45</strong></td> <td style="background-color: #C58F5C; color: #ffffff;">Paper Sessions 13 to 18</td> <td style="line-height: 1.5;"> 
+                                    <strong>Parallel Paper Sessions 13 to 18:</strong> Oral Presentations on various topics across multiple tracks.
+                                </td>
+                            </tr>
+                            <tr> <td><strong>17:45 - 18:30</strong></td> <td style="background-color: #8E75FF; color: #ffffff;">Keynote 8</td> <td><strong>Valedictory Keynote:</strong> Shri M. K. Ramesh, Chief General Manager (CGM), SRLDC, Grid India.</td> </tr>
+                            <tr> <td><strong>18:30 - 19:00</strong></td> <td style="background-color: #8C5766; color: #ffffff;">Valedictory Function</td> <td> <strong>Valedictory Function:</strong> Best Paper/s and Poster/s Awards</td> </tr>
+                            <tr> <td><strong>19:00 - 19:30</strong></td> <td>High Tea</td> <td>High Tea</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h2 style="margin: 20px 0 5px 0; border-top: 2px solid #4A8072; color: #4A8072;"> Paper Session Details</h2>
+            <p> Below is the complete listing of papers assigned to each technical session. The sessions have been structured by theme to ensure coherence and smooth flow of presentations. Participants may browse through the session-specific tables for paper titles, authors, and presentation timings.</p>
+            <p style="font-size: 0.9rem; color:#374B47;">Click on the session titles below to expand and view the complete paper allotment for each session.</p>
+
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session I — Smart Grid and Power Systems (08 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format" aria-label="Session I">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Day 01</td>
-                            <td>Sunday, 07 Dec 2025</td>
-                            <td>Tutorials</td>
-                            <td>Tutorials</td>
-                            <td>Inaugural Ceremony and Keynote Talks</td>
-                        </tr>
-
-                        <tr>
-                            <td>Day 02</td>
-                            <td>Monday, 08 Dec 2025</td>
-                            <td>Paper Sessions and Keynote Talks</td>
-                            <td>Keynote Talks and Poster Session</td>
-                            <td>Special Session and Cultural Evening</td>
-                        </tr>
-
-                        <tr>
-                            <td>Day 03</td>
-                            <td>Tuesday, 09 Dec 2025</td>
-                            <td>Paper Sessions and Keynote Talks</td>
-                            <td>Keynote Talks and Industry Session</td>
-                            <td>Paper Sessions and Valedictory Ceremony</td>
-                        </tr>
+                        <tr><td>63</td><td>An IoT-Enabled Framework for Real-Time Smart Metering with Dynamic Tariff Pricings</td><td>S Gayathri; M Monisha; Anant Kumar; K Shanti Swarup</td></tr>
+                        <tr><td>64</td><td>Generative Artificial Intelligence Enabled Smart Metering Framework For Predictive Energy Sharing</td><td>M Monisha; S Gayathri; Anant Kumar; K Shanthi Swarup</td></tr>
+                        <tr><td>68</td><td>Assessment of Unbalance in Tata Power Mumbai Network due to Single-Phase Railway Loads</td><td>Santosh V. Singh; Prashant V. Navalkar; Anil M. Kulkarni; Girish T. Jawale</td></tr>
+                        <tr><td>123</td><td>Impact of Cyber Vulnerabilities on Automated BESS Mode Transitions in Smart Microgrid</td><td>Suhani Baru; Khwrwmdao Basumatary; Anup Shukla</td></tr>
+                        <tr><td>255</td><td>Impact of ToD Charges and Power Factor on Total Energy Costs of BVRIT Campus Distribution Grid</td><td>VSB Chaitanya Duvvury; Josna Goud G; G Bhanu Ganesh; Pradeep Kumar Yemula</td></tr>
+                        <tr><td>288</td><td>Data-Driven Fault Classification and Localization in Smart Grids for Accurate Self-Healing Using Multifaceted Machine Learning Techniques</td><td>Praneeth N; P Swati Patro; STP Srinivas</td></tr>
                     </tbody>
-                </table>
+                    </table>
+                </div>
+            </div>
+            <!-- Session II -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session II — Security-Constrained Economic Dispatch (08 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>26</td><td>SECED Pilot Study - For Emission-Constrained Economic Dispatch for India’s ISGS thermal fleet</td><td>Debasis De; Sushil K Soonee; Deb Chattopadhyay</td></tr>
+                        <tr><td>54</td><td>SCED in India: The Duals Behind Dispatch</td><td>Debasis De; Sushil K Soonee; R S Abhishek; Deb Chattopadhyay; Saumen Majumdar</td></tr>
+                        <tr><td>59</td><td>Addressing Infeasibilities in SCED Optimization</td><td>Debasis De; Sushil K Soonee; Abhishek R S; Deb Chattopadhyay; Saumen Majumdar</td></tr>
+                        <tr><td>110</td><td>Ramping in States Power System in India: Harnessing Flexibility through Integrated SCED</td><td>Debasis De; Abhishek R S; Sushil K Soonee; Deb Chattopadhyay</td></tr>
+                        <tr><td>118</td><td>Optimizing Regional Power Trade in South Asia: A SECED Based Emission-Constrained Economic Dispatch Framework</td><td>Anita Prajapati; Richa Parmar; Khadiza Umme Tahera; Phuntsho Choden;  Fareeha Kaleem; Aishath Yamna; Melundi Nishshanka; Anju Pathak; Sweta Rani; Fatima Taseer; Sayba Habib Jenifer; Deb Chattopadhyay; Debasis De; S. K. Soonee</td></tr>
+                        <tr><td>173</td><td>Scheduling vs Despatch in the Indian Power Sector: The Statutory Role of Load Despatch Centre</td><td>S K Soonee; Dr. Deb Chattopadhay; Dr. Sushanta Chatterjee; Debasis De</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Session III -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session III — Power Systems Protection, Stability, and Optimization (08 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>78</td><td>Modular Open-loop Eigen-sensitivity Analysis for Computation-efficient Stability Assessment</td><td>Aditya Pandey; Lokesh Kumar Dewangan</td></tr>
+                        <tr><td>109</td><td>Impact of Droop Control on Impedance Trajectories under Stable Power Swings in Grid-Forming Converter-Integrated Power Systems</td><td>Sreenath B; Balabhaskar S S; Manas Kumar Jena</td></tr>
+                        <tr><td>171</td><td>Transient Response Analysis in IBR-Dominated Power Systems Based on Short Circuit Ratio</td><td>Koduri Gowtham; Kiran Teeparthi; Pavan Kumar Yadala</td></tr>
+                        <tr><td>225</td><td>Loss of Synchronism during Grid Disturbances in India</td><td>Mithila Aithagani; Anil M. Kulkarni</td></tr>
+                        <tr><td>229</td><td>Virtual Inertia vs Physical Inertia for Improving the Stability of a Heavily Renewable Driven Power System</td><td>Ravi Reddi; Deepak Kumar Soni; Vaskar Sarkar</td></tr>
+                        <tr><td>273</td><td>Modal Controllability and Observability Estimation of Critical Power System Modes From MIMO Frequency Scans</td><td>Kaustav Dey; Anil M. Kulkarni</td></tr>
+                    </tbody>
+                    </table>
+                </div>
             </div>
 
-            <h2>Upcoming Detailed Schedule</h2>
-            <p>
-                We are finalizing the detailed session structure, including the sequencing of technical tracks, keynote sessions, tutorials, and poster presentation slots. These details will appear here as soon as they are finalized.
-            </p>
-            <p>
-                A downloadable program booklet (PDF) will also be made available for easy reference before the conference.
-            </p>
-        </div>
-    </div>
-</body>
+            <!-- Session IV -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session IV — Grid Resilience and Security (08 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>56</td><td>A Novel Image-Based Watermarking Method for Detecting False Data Injection in Line Current Differential Relays</td><td>Swati Agarwal; Kondety Tony; Manish Pandit; Ranjana Sodhi</td></tr>
+                        <tr><td>73</td><td>Evaluating Cascading Failure for Grid Resilience under Extreme Weather Events</td><td>Chandan Chaudhary; Alaaeldein Abdelkader; Mohammed Benidris; Joydeep Mitra</td></tr>
+                        <tr><td>83</td><td>Hybrid IWSOA-ANN Approach for Load Stability During Cyber-Attack Blocking Controller Access</td><td>Arti Singhal; Ashu Verma; Rabindra Mohanty</td></tr>
+                        <tr><td>88</td><td>Effective Graph Resistance based Vulnerability Assessment Framework for Cyber Resilient CPPS</td><td>Jigyasa Singhai; K Shanti Swarup</td></tr>
+                        <tr><td>274</td><td>Analyzing Risk in Power Substations through an Automated Vulnerability Assessment Tool</td><td>Shashank S; Nayan Aahladh; Sridevi P Rao; Gurunath Gurrala; Vaibhav Katewa; Vikas Bishnoi; Manoj Kumar</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
 
+            <!-- Session V -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session V — Renewable Energy Systems (08 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>75</td><td>Hydrogen-Based Offshore Wind Farm Energy Storage: Simulation and Sensitivity Analysis</td><td>Sree Vyshanvi Mamilla; K Shanti Swarup</td></tr>
+                        <tr><td>85</td><td>A Data-Driven Framework of PV Hosting Capacity Assessment for a Military Garrison</td><td>Ujjawal Srivastava; P Amritansh Naidu; Ankit Singhal</td></tr>
+                        <tr><td>135</td><td>Wind Power Forecasting using Auto-Regressive QRF for Operational Reserve Management</td><td>Girraj Raigar; Naveen Kumar Thokala; Swathi Battula; Abheejeet Mohapatra</td></tr>
+                        <tr><td>167</td><td>Comparative Assessment of Feedforward and Sequence-Based Neural Networks for Solar Radiation Prediction Model</td><td>Bongoni Naresh; Amit Kumar Yadav; Ch Vineeth</td></tr>
+                        <tr><td>177</td><td>Hybrid Energy Storage-Based Power Management Strategy for Stand-alone DC Microgrid</td><td>Krishnakant; Chuskit Dolma; Pravin Kumar; Prabodh Bajpai</td></tr>
+                        <tr><td>222</td><td>Sector Coupling between Green Hydrogen and Steel: Machine Learning-based Estimation of Levelized Cost of Steel</td><td>Pratham Goel; Naran Pindoriya</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Session VI -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session VI — Power System Planning and Operations (08 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>94</td><td>Tariff Impact Analysis on Peer-to-Peer Energy Sharing in Residential Communities</td><td>Gopalji S. Kalojiya; Anupama S. Kowli</td></tr>
+                        <tr><td>117</td><td>A Comprehensive Design Framework for AT-Fed Railway Traction Power Systems</td><td>Archita Vijayvargia; Abhijit Abhayankar</td></tr>
+                        <tr><td>120</td><td>Fast Jacobian Evaluation for Islanded Microgrid Load Flow Using Compact Matrix Operations for Composite Load Models</td><td>Rasmita Muduli; Debapriya Das</td></tr>
+                        <tr><td>125</td><td>Deep Analysis for Selective Control and CO2 Emission in Power Systems</td><td>Suresh Varwandkar</td></tr>
+                        <tr><td>130</td><td>Insights and Analysis from Black Start Mock Drill Case Studies using Synchrophasor Technology</td><td>Praveen Tripathy; Subhash Kumar; Sachin Singh; Kishore Kalita; Saksham Rithe; Sharmistha Dutta</td></tr>
+                        <tr><td>202</td><td>Impact Analysis of Zero-Sum False Data Injection Attacks on Peer-to-Peer Energy Trading</td><td>V.V.N Prasad Thota; Kiran Teeparthi; Sri Phani Krishna Karri</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- Session VII -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session VII — Electric Vehicles and Drives (09 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>91</td><td>Power Electronics Converter Topologies and Control Methods for On-Board and Off-Board Electric Vehicle Charging Systems: An Overview</td><td>Jajjalya Kashyap; E S N Raju P</td></tr>
+                        <tr><td>93</td><td>Decentralized Smart EV Charging with Multi-Agent System Communication and Energy Coordination</td><td>Priyansh Dwivedi; Himanshu Tiwari; Pradhyumna Yadav; Murari Kumar; K Shanthi Swarup</td></tr>
+                        <tr><td>128</td><td>Electric vehicle battery charger based on DC-001 charging standard</td><td>Vaishnavvignesh G Iyer; Cilaveni Satish Chandra; Ravindranath Adda; Sreenath J G; Praveen Tripathy</td></tr>
+                        <tr><td>223</td><td>Light Load Efficiency improvement of Dual Active Bridge Converter for EV Fast Charging Application</td><td>Nagasai G; Ravikumar Bhimasingu</td></tr>
+                        <tr><td>261</td><td>High-Efficiency SIDO-SEPIC with Improved Cross-Regulation for EV Charging Systems</td><td>Kamalesh MS; Prabha S Umapathy; Bharatiraja Chokkalingam; Sanal Kumar S; Prasanth Kumar R; Ritika S</td></tr>
+                        <tr><td>266</td><td>Electrifying Mobility: Dynamic Charging for Next-Generation Electric Vehicles</td><td>Mahendar Reddy Peddolla; Sanjeeva Reddy B R</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Session VIII -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session VIII — Power System Planning & Operations (09 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>126</td><td>Co-optimized Flexibility Market Framework for DSO Enabled Market Operations</td><td>Manu Ranjan Sharan; Abhijit R. Abhyankar; Ankit Singhal</td></tr>
+                        <tr><td>142</td><td>Cost Allocation Mechanism for Shared Battery Storage Systems: A Game-Theoretic Approach</td><td>Anchal Maurya; Harshit Dhiman; Agam Jain; Jeet Vijay Shah; Kartikey Singh Bhadauria; Deep Kiran</td></tr>
+                        <tr><td>191</td><td> BIBC-Based Distribution Network Reconfiguration with Optimal Placement and Sizing of Renewable DGs under a 24-Hour Load Profile</td><td>Astamita Mishra; Manish Tripathy; Papia Ray</td></tr>
+                        <tr><td>228</td><td>A Hybrid Clustering-PSO Framework for Reliable Islanded Microgrid Expansion Planning</td><td>Rasmita Muduli; Debapriya Das</td></tr>
+                        <tr><td>230</td><td>Operational Strategies for Enhancing RE Integration into the Grid using Existing Transmission System</td><td>Minnakuri Venkateswara Rao; Priyam Jain; Vishal Puppala; Himanshu Verma; Gaurab Dash; Goodelli Madhukar; T Muthu Kumar</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Session IX -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session IX — Smart Grid & Power Systems (09 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>106</td><td>Digitizing Electrical Panels with MQTT and Multi-Network Raspberry Pi Gateways</td><td>Anmol Sardhalia; Sheraza Bashir; Ayush Yadav; Nikhat Singla; Dr.Anup Shukla</td></tr>
+                        <tr><td>131</td><td>Impacts of fast voltage boosters with current limiters of droop controlled grid forming inverters during delayed voltage recovery events</td><td>Upendran Mukundarajan; K. Shanti Swarup</td></tr>
+                        <tr><td>195</td><td>Performance Assessment of Inverter-Fed Autonomous Microgrid with Uniform and Non-Uniform Delay Utilizing Internal Model Controller</td><td>Sneha Goneguntla; Gnana SaiSree Boppudi; Naresh Kumar Vemula; Pratikanta Mishra; Kiran Kumar N; Pradeep Kumar Yemula</td></tr>
+                        <tr><td>200</td><td>Improving Stability of GFL Inverter in Weak Grid using Paralleled GFM Inverter: Hardware Validation</td><td>H R Sai Kiran Pandit; Sarasij Das</td></tr>
+                        <tr><td>258</td><td>An Improved Differential Admittance Based Fault Detection Algorithm for Low Voltage AC Microgrid</td><td>Joy Narayan Das; Dr. Biswajit Sahoo; Sandeep Banik</td></tr>
+                        <tr><td>286</td><td>Short-Term Load Forecasting for Energy and Cost Savings: A Case Study</td><td>T. Praneeth; Gajangi Arun Kumar; P. Ram Kishore Kumar Reddy; Pradeep Kumar Yemula</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Session X -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session X — Power System Protection, Stability & Optimization (09 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>61</td><td>Advanced Power Grid Feeder Protection and Control Functions for Wildfire Mitigation and Control</td><td>Srujana Yenigalla; Nagarjuna Koppakula; Sai Pramod Tati; Priya Kumari; Balakrishna Pamulaparthy</td></tr>
+                        <tr><td>70</td><td>An Integrated Approach for Fault Diagnosis and Localization in DC Microgrid</td><td>Anu Bhalla; Bhavesh R. Bhalja</td></tr>
+                        <tr><td>136</td><td>Sequence Component-Based Protection Strategies for Fully Inverter-Dominated Microgrids</td><td>Arjita Pal; Rabindra Mohanty; Bijaya Ketan Panigrahi</td></tr>
+                        <tr><td>170</td><td>Transmission Networks Connected With GFM Inverters: Protection Challenges and Opportunities</td><td>OD Naidu; Aarthi V; Neethu George; Vedanta Pradhan</td></tr>
+                        <tr><td>236</td><td>Analysis of Grid Protection in the North-East Regional Network of India Using Actual Fault Data Under High Solar PV Penetration</td><td>Subhash Kumar; Karan Katariya; Sachin Singh; Subhra Ghosh; Amba Tiwari; Neeraj Kumar; Sajan George; Deepak Pullaguram; Ashok Pradhan</td></tr>
+                        <tr><td>237</td><td>A New Facile Time-Voltage-Current Characteristics for Numerical Distance Relay Coordination in Modern Power Grids and FPGA Implementation</td><td>Praneeth N; STP Srinivas; Alivelu Manga Parimi</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Session XI -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session XI — AI & Data Analytics in Power Grids (09 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>102</td><td>Optimized Hybrid CNN-Transformer-LSTM Architecture for Accurate Solar Irradiance Forecasting under Variable Weather Conditions</td><td>Shanker M; Vikram Kulkarni</td></tr>
+                        <tr><td>124</td><td>Efficient Wide Area Data Compression — A Ramanujan’s Sum-Based Approach</td><td>Manish Pandit; Ranjana Sodhi</td></tr>
+                        <tr><td>144</td><td>Sectoral Disaggregation of India’s Peak Day Load Curve: A Pathway to Demand Flexibility</td><td>Pallavi Buwa; Anupama Kowli</td></tr>
+                        <tr><td>172</td><td>OTC Platforms in Indian Power Markets  - Driving Digitalization and Data Analytics for Economy, Efficiency, and Transparency</td><td>Vinod Kumar Agrawal; Kapil Dev; Ashish Shrivastav; Sahil Kapoor; Nitesh Jha; Gaurav Rupani; Amit Chauhan; Arunima Mishra; Sushil Kumar Soonee</td></tr>
+                        <tr><td>183</td><td>Cybersecure Line Differential Relay Based on Transient Signatures and Decision Tree Classification</td><td>Suryanarayana Gangolu; Rakesh Kumar Panda; Suman M; CH Venkateswarlu</td></tr>
+                        <tr><td>187</td><td>Constrained Loss Function Optimization based Short-Term Load Forecasting</td><td>Murari Jha; Ankit Singhal</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Session XII -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session XII — Control in Power Systems / Power Electronics (09 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>82</td><td>Cyber-Physical Vulnerabilities of Distributed Secondary Control in DC Microgrids: The Role of DoS Attacks and CPLs</td><td>Bazila Rashid; K. Shanti Swarup</td></tr>
+                        <tr><td>129</td><td>Controller design for Three level boost converter with single-phase inverter load</td><td>Vaishnavvignesh G Iyer; Cilaveni Satish Chandra; Ravindranath Adda; Sreenath J G; Praveen Tripathy</td></tr>
+                        <tr><td>193</td><td>LVRT-Enabled Virtual Synchronous Generator Control for Grid-Forming Inverter-Based Resources</td><td>Supriya Sharma; Yashasvi Bansal</td></tr>
+                        <tr><td>198</td><td>A 3-phase 2-level inverter with AC side boost and CMV mitigation scheme</td><td>S S Phaniram Musti; Ravikumar Bhimasingu</td></tr>
+                        <tr><td>220</td><td>Modified Control Strategy to Improve the CC-CV Mode Transition Performance in Variable DC-Link Voltage On-Board Chargers</td><td>Cilaveni Satish Chandra; Vaishnavvignesh G Iyer; Ravindranath Adda; Sreenath J G; Praveen Tripathy</td></tr>
+                        <tr><td>226</td><td>Controller Output Dynamic Limiting Technique for Overshoot Suppression in Current-Controlled Grid-Following PV Systems</td><td>Ajay Jena; Arun Rahul S</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Sessions XIII - XVIII (Afternoon Day 3) -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session XIII — Power System Planning & Operations (09 Dec, 16:15-17:45)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>185</td><td>Decentralized Energy Exchange: A Blockchain-Based Smart contract Pricing Model for Sustainable Distributed Energy Markets</td><td>Tharun Tejavath; Surendra Srinivas</td></tr>
+                        <tr><td>207</td><td>Utilization of Spinning Reserves in Largest Hydro Electric Power Plant in India — A Base Case</td><td>Rajesh Kumar; Absar Ahmad; Pavitra Malik; B. Raviteja</td></tr>
+                        <tr><td>233</td><td>Optimal reliability planning of radial distribution network considering hourly energy availability with renewables integration</td><td>Dharmendra Trivedi; Naveen Jain; Umesh Agarwal; Manoj Kumawat</td></tr>
+                        <tr><td>259</td><td>Real-Time Oscillation Analytics for Power Grids: A Wavelet-Assisted Matrix Pencil Approach in SLDC Operations</td><td>Raja Shekar Nalluri; Bhanu Ganesh Ganta; Pradeep Kumar Yemula; Chandra Sekhar Maragoni; Nataraj Pathri</td></tr>
+                        <tr><td>287</td><td>Markov Modeling Based Reliability Evaluation of Compressed Air Energy Storage in Grid Operations</td><td>Abhishek Harit; Prerna Jain; Satish Sharma</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session XIV — Control in Power Systems / Power Electronics (09 Dec, 16:15-17:45)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>127</td><td>A Soft-Switched Dual Active Push-Pull Converter</td><td>Jabi Ali; Mandeep Singh Rana</td></tr>
+                        <tr><td>252</td><td>Remaining Useful Life Prediction of Boiler Feed Pump Motor: A Statistical and Condition Monitoring Approach for Industry 5.0</td><td>Koti Reddy Butukuri; Hari Preetham Golla; Pradeep Kumar Yemula; Gali Sridhar; Tadiparti Koti Reddy</td></tr>
+                        <tr><td>253</td><td>Multilevel Inverter for Grid Connected and Standalone applications</td><td>Shoubhik Mukherjee; Dr. Rupesh Wandhare; Deepak Gehlot; A.S Krishnapriya</td></tr>
+                        <tr><td>269</td><td>Unbalanced Reference Voltage generation for Grid Forming Inverter Control During Asymmetrical Faults</td><td>Sunil Gajula; Ravikumar Bhimasingu</td></tr>
+                        <tr><td>271</td><td>Modified Direct Power Control of Photovoltaic to Grid tied Voltage Source Converter with Active Filtering Capability</td><td>Praveen Vankadari; Korivi Yogananda Reddy; Sree Hari J B; Akshay Chabukswar; Avinash Naramu; Rupesh Wandhare</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session XV — Electric Vehicles and Drives (09 Dec, 16:15-17:45)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>49</td><td>Implications of induction of Electric Vehicles in India</td><td>Goutam Bhaskhar; Saumen Majumdar; Debabrata Chattopadhyay; S.K. Soonee; Debasis De</td></tr>
+                        <tr><td>69</td><td>Swarm-Based EV Fleet with Grid-Aware Charging and Traffic-Adaptive Routing in Urban Networks</td><td>Greeshma Potnuru; K Shanti Swarup</td></tr>
+                        <tr><td>256</td><td>Assessing Impact of Dynamic Parameters on Electric Vehicle Energy Consumption using Parameter Perturbation Analysis</td><td>Bhanu Ganesh Ganta; Raja Shekhar Nalluri; V S B Chaitanya Duvvury; Pradeep Kumar Yemula</td></tr>
+                        <tr><td>263</td><td>Physics-Guided Indicators with PSO-Tuned Regression for EV Battery SOH Estimation</td><td>V. Yashwanth; Y. Likhith; B. Nikhil; C. Priyanka; K. H. Phanishree</td></tr>
+                        <tr><td>267</td><td> Optimal EV Charging under Marginal Emission Factors and Time-of-Use Tariffs: Comparison of Telangana and Karnataka</td><td>Aishree Boruah; Gaddam Vardhan; Parmar Aryan Jasvantkumar; Pritha Chatterjee</td></tr>
+                        <tr><td>279</td><td>Real-time Monitoring of Energy Dynamics in Electric Vehicles</td><td>Bhanu Ganesh Ganta; Pradeep Kumar Yemula; Koti Reddy B</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session XVI — Electric Vehicles and Drives (09 Dec, 16:15-17:45)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>10</td><td>Real-Time Fault Analysis and System Optimization in EV Controllers with Field-Oriented Control: A Practical Investigation on Monitoring Diagnostics and Enhancements</td><td>Suganya R; L.M.I. Leo Joseph; K Sreedhar</td></tr>
+                        <tr><td>181</td><td>Multilayer Winding Configuration for Variable Pole Induction Motor Drives</td><td>Monika Jain; B Prathap Reddy</td></tr>
+                        <tr><td>265</td><td>A Constant Switching Controller based DTC Scheme for Speed Control of Five-Phase Open End Winding Induction Motor</td><td>C Venkata Subba Reddy; Sabavath Akhila; Nalla Akshitha; Gunji Poojitha; Yadlapalli Ragini</td></tr>
+                        <tr><td>270</td><td>Robust Optimal Non-Linear Control Technique for Efficient EV Drive Applications</td><td>Akshay Chabukswar; Sree Hari J B; Ponnaganti Sirisha Devi; Korivi Yogananda Reddy; Chekka Supriya; Rupesh Wandhare</td></tr>
+                        <tr><td>272</td><td>Simulink-Based Modeling of Regenerative Braking with Energy Recovery Optimization for Electric Vehicles</td><td>Sadia Begum; Ujwala Gajula; Gouthami Eragamreddy; Swapna Raghunath</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session XVII — Smart Grid & Power Systems (09 Dec, 16:15-17:45)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>44</td><td>Design and Implementation of Blockchain-Enabled P2P Energy Trading Testbed</td><td>Shweta Arvind Kadam; Debasmita Panda; Ashutosh Yadav</td></tr>
+                        <tr><td>84</td><td>Operational Analysis of Shipboard DC Microgrid Integrated with Advanced Storage Solutions</td><td>Ayush Bhatia; Rabindra Mohanty; Avanish Tripathi</td></tr>
+                        <tr><td>86</td><td>Hybrid Islanding Detection in Grid-Connected PV-Battery Microgrid</td><td>Suraj Mishra; P Amritansh Naidu; Bijaya Ketan Panigrahi</td></tr>
+                        <tr><td>190</td><td>Identification and Exploitation of Critical Lines through Targeted LR Attacks</td><td>V. Bharat Kumar; Satish Sharma</td></tr>
+                        <tr><td>194</td><td>Practicing Advanced Technology Implementation for Indian Transmission Grid</td><td>Dr. Amit R. Kulkarni</td></tr>
+                        <tr><td>210</td><td>Experimental Validation of Online Frequency Response Estimation of a Multi-port LTI Apparatus using Power System Ring-down Events</td><td>Santosh Singh; Anil Kulkarni</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Session XVIII — Renewable Energy Systems (09 Dec, 16:15-17:45)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>50</td><td>Fault Detection in Unequal-Rated PV Strings Using Normalized Power and Snapshot Median Filtering</td><td>Jayakumar J; Justin Salamon M; Aswin Kumar M; Perachi Selvam P; Subramanyam L; Kesavan Nair K.P</td></tr>
+                        <tr><td>79</td><td>Techno-Economic Modeling of a Renewable Hybrid Energy System</td><td>Kavya E M; Monisha M; Pasela Ramtej; K Shanthi Swarup</td></tr>
+                        <tr><td>96</td><td>Next-Gen Offshore Wind Year Ahead Forecasting Aided Modelling for Techno-Economic Feasibility</td><td>Nidhi Gummaraju; Shri Varshini C; Sree Vyshnavi Mamilla; Greeshma Potnuru; K Shanti Swarup</td></tr>
+                        <tr><td>247</td><td>Capacity credits for renewable energy and value of cross-border transmission in South Asian power systems</td><td>Suruchi Uppal; Srishty Jain; Puneet Chitkara; Sushil Kumar Soonee</td></tr>
+                        <tr><td>281</td><td>Techno-Economic Feasibility Analysis of a Building Integrated Agrovoltaics Model</td><td>Alan Sam; Bhanu Ganta; Pradeep Kumar Yemula; Rayudu Katuri</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Online Session -->
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Online Presentations (09 Dec, 09:00-10:30)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format" aria-label="Online session">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>81</td><td>Design and Modeling of Campus Microgrid for Future Sustainable Energy Operations</td><td>Mahmuda Akter; Jannatul Ferdous; Samiul Hasan Emon; Shah Mohazzem Hossain</td></tr>
+                        <tr><td>138</td><td>Comparative Analysis of Flywheel and Battery  Energy Storage Systems for Smoothing Photovoltaic  Power Output</td><td>Anil Bhatt; Bipin Subedi; Nita Kumari Phuyal; Aashish Yakami; Gaurav Tamrakar</td></tr>
+                        <tr><td>141</td><td>Space Vector PWM Inverter Based Indirect Field Oriented Control for Induction Motor</td><td>Aayush Bhatta; Sandip Timsina; Ritesh Basnet; Urusha Kisi; Rojan Tamang; Hari Bhusal; Mensun Lakhemaru</td></tr>
+                        <tr><td>244</td><td>Techno-Economic and Environmental Assessment of On-Grid Rooftop Solar Integration for Diesel-Dependent Urban Markets</td><td>Md. Sabbir Alam; Shah Mohazzem Hossain</td></tr>
+                        <tr><td>245</td><td>Exploring a Hybrid Renewable Energy System to Meet Bangladesh’s Future Energy Needs</td><td>Md. Aminul Hoque; MD. Nahid Billah; Shah Mohazzem Hossain</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h2 style="margin: 20px 0 5px 0; border-top: 2px solid #4A8072; color: #4A8072;"> Poster Session Details</h2>
+            <p> Below is the complete listing of papers assigned to poster session. Authors are requested to be present at their posters during the dedicated poster session time.</p>
+            <button class="accordion" style="background: #ffffff; color: #374B47; border: 2px solid #374B47; font-size: 1rem;">Poster Session — 08 Dec (16:15-17:45)</button>
+            <div class="panel">
+                <div class="table-container" style="font-size: 0.8rem;">
+                    <table class="table-format" aria-label="Poster session">
+                    <thead><tr><th style="background-color:#E8F0EE; color:#374B47;">Paper ID</th><th style="background-color:#E8F0EE; color:#374B47;">Title</th><th style="background-color:#E8F0EE; color:#374B47;">Authors</th></tr></thead>
+                    <tbody>
+                        <tr><td>41</td><td>Intra state SCED, dispatch using LP optimization in Maharashtra - A case study</td><td>Debasis De; Sushil K Soonee; Prof. Zakir Hussain Rather; Shashank Jewalikar; Akhilesh Panwar; Dr. Deb Chattopadhyay</td></tr>
+                        <tr><td>62</td><td>Data-Driven Inertia Estimation using BiLSTM and XGBoost for RES Integrated Power Networks</td><td>Magam Vasista Sai; Shahbazuddin Syed; Altaf Q. H. Badar; Prachi Salodkar</td></tr>
+                        <tr><td>65</td><td>Study of Dielectric Performance of Insulating Stand-offs Under Lightning Impulse</td><td>Gyanendra Kumar Kurmi; Basanta Kumar Gautam</td></tr>
+                        <tr><td>66</td><td> Experimental study of the surface dielectric strength of insulating tubes on basis of geometry under lightning impulse voltages</td><td>Akrit Acharya; Basanta Kumar Gautam</td></tr>
+                        <tr><td>74</td><td>Review of Mathematical Modeling and Scheduling Strategies of an Electric Vehicle Aggregator</td><td>SSSR Sarathbabu Duvvuri; Bala Sai Kiran P; Pinnamraju Sadhvika; Kukkala Varshini; Majji Vaishnavi; Jillabathula Pavithra</td></tr>
+                        <tr><td>76</td><td>Adaptive Electric Vehicle EMS with Secure V2G Energy Transactions using Blockchain</td><td>C Shri Varshini; Nidhi Gummaraju; K Shanthi Swarup</td></tr>
+                        <tr><td>92</td><td>A Survey on Fault Location, PMU Deployment, and Fault Behavior of Distributed Generators and Active Loads in Medium-Voltage Distribution Networks</td><td>Anchal Maurya; E S N Raju P</td></tr>
+                        <tr><td>100</td><td>Multi-part Innovative Tariff Framework for the Renewables for ambitious Net Zero targets</td><td>Sushil Kumar Soonee; Dr Amit Kumar Singh Parihar; Ghansham Thakkar; Himanshu Mishra</td></tr>
+                        <tr><td>104</td><td>Improving Wind Energy Forecast Accuracy Using Machine Learning</td><td>Tirunagaru V Sarathkumar;  T Sanjeeva Rao; Arup Kumar Goswami; T Venkata Prasad</td></tr>
+                        <tr><td>116</td><td>Virtualization of Protection in Distribution Substation: An Object-Oriented Approach</td><td>Bhaskar Sahu; K Shanthi Swarup</td></tr>
+                        <tr><td>119</td><td>Impact of Filters on Grid Connected BESS: Experimental Analysis and Validation</td><td>Nivedika Kher; Sonam Gupta;   Anup Shukla</td></tr>
+                        <tr><td>137</td><td>Key Insights from Security-Constrained Economic Dispatch: A Case Study for Uttar Pradesh</td><td>Nishant Kumar; Abheejeet Mohapatra;  Prabodh Bajpai;  Swathi Battula;  Sushil Kumar Soonee;  Arun Kumar Mishra;  Sangeeta</td></tr>
+                        <tr><td>143</td><td>Detection and Localization of Low-Frequency Oscillations in North Eastern Region of India in the Presence of Inverter Based Resources</td><td>Karan Vasudev Katariya; Subhash Kumar; Palash Jyoti Borah; Kishore  Kalita; Sajan George; Deepak Reddy Pullaguram; Ashok Kumar Pradhan </td></tr>
+                        <tr><td>192</td><td>Optimising Power Despatch: Security Constrained Economic Despatch Initiative in Gujarat</td><td>Divya Sharma; Vatsalkumar Bhatt; Pandya Darshan Dilipkumar;  Naran M. Pindoriya;  Utpal Patel;  Chetan Darji; A B Rathod; Sushil Kumar Soonee; Debasis De </td></tr>
+                        <tr><td>196</td><td>Directional Overcurrent Relay Coordination in a Microgrid Environment by using Genetic Algorithm, and Breeder Genetic Algorithm</td><td>Ravindra Mankar; Pranav Darji </td></tr>
+                        <tr><td>205</td><td>A Novel Development of a Single Switch DC DC Circuit for Fuel Cell Systems</td><td> Gurijala Sreedhar; CH Hussaian Basha; Likhitha R; Prathibha E; Muralikrishna Boddu </td></tr>
+                        <tr><td>212</td><td>Impact of Different Current Limiting Strategies on Stable Power Swing Trajectories in Grid-Forming Converter-Integrated Power System</td><td>Balabhaskar S S;  Sreenath B;  Manas Kumar Jena </td></tr>
+                        <tr><td>219</td><td>Shock-Proofing the Grid: Readiness of Indian  Electricity Markets for Futures-Based Hedging  Instruments</td><td> Ribhu Shankar;  Dr. Parminder Kaur Bajaj </td></tr>
+                        <tr><td>250</td><td>An Enhanced VMD-DT-Based Fault Protection Scheme for AC Microgrid</td><td>Sandeep Banik;  Dr. Biswajit Sahoo;  Prof. Jyoti Prakash Mishra </td></tr>
+                        <tr><td>264</td><td>A Hybrid Symmetrical Optimum-Pattern Search tunned PI Based Three-Phase SRF PLL Synchronization System Under Grid Irregularities</td><td>C Bibhuti Prasad Sahoo;  Adityansu Pati;  Raseswari Pradhan </td></tr>
+                        <tr><td>278</td><td>Security Constrained Economic Despatch for TGSLDC: Architecture, Data Pipeline, and MOD Benchmarking</td><td>Avik Ghosh;   Pradeep Kumar Yemula;  P. Suresh Babu;  B. Raja Thirupathi; L. Sarveswar </td></tr>
+                        <tr><td>280</td><td>Adaptive Distance Relay Protecting Transmission Lines Connecting Inverter Based Resources</td><td>Chandra Panda;  Deepak Pullaguram;   Ashok Kumar Pradhan </td></tr>
+                        <tr><td>285</td><td>Remaining Useful Life Estimation of Aged Power Transformers: A Case Study Using Degree of Polymerisation and Furan Analysis</td><td>Koti Reddy B; Pradeep Kumar Yemula; Vishal Devulapalli; Rammohan Rao Vemula; Bhanu Ganesh Ganta </td></tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Accordion script -->
+    <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+    }
+    // Keep panels collapsed by default (in case some are visible)
+    document.addEventListener('DOMContentLoaded', () => {
+        const panels = document.querySelectorAll('.panel');
+        panels.forEach(p => p.style.display = 'none');
+    });
+    </script>
+
+</body>
+<!-- Footer -->
 <footer class="footer-grid">
     <div class="footer-content">
-        &copy; 2025 ICPS. All rights reserved. | ICPS 2025 is organized by the Department of Electrical Engineering, IIT Hyderabad.
+        &copy; 2025 ICPS. All rights reserved. | Organized by Dept. of EE, IIT Hyderabad.
     </div>
 </footer>
+
 </html>
