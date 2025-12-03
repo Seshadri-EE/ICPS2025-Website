@@ -881,4 +881,25 @@ body{
     padding-bottom: 10px; /* Space between text and line */
 }
 
+.active-tab {
+    background-color: #00796b !important;
+    color: #ffffff !important;
+}
+
+.session-moderator {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 10px 0 15px 0;
+    padding: 8px 12px;
+    background: #f4f4f4;
+    border-left: 4px solid #0077cc;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
 
