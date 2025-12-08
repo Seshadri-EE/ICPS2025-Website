@@ -6,31 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- your stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Minimal color-coded left borders */
-        .session-tutorial { border-left: 4px solid #5aa0e6; }
-        .session-break { border-left: 4px solid #c8c8c8; }
-        .session-inaugural { border-left: 4px solid #8E75FF; }
-        .session-keynote { border-left: 4px solid #4db6ac; }
-        .session-social { border-left: 4px solid #d4b35c; }
-
-        /* Gentle padding so the color strip looks intentional */
-        .table-format td {
-            padding-left: 12px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
-    
-
-    <!-- Menu loader -->
+    <!-- Menu Bar -->
     <script>
-        fetch('menu.html')
-            .then(r => r.text())
-            .then(d => document.getElementById('menu-container').innerHTML = d)
-            .catch(() => {/* fail silently */});
+        fetch('menu.html')  // Path to the menu.html file
+        .then(response => response.text())  // Fetch data from menu.html
+        .then(data => { // Place the fetched data into the file
+            document.getElementById('menu-container').innerHTML = data;  
+        })
+        .catch(error => console.error('Error loading the menu:', error));
     </script>
     <div id="menu-container"></div>
 

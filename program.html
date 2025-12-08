@@ -4,17 +4,20 @@
     <title>ICPS 2025 – Keynotes & Tutorials</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-    <!-- Menu -->
-    <div id="menu-container"></div>
+    <!-- Menu Bar -->
     <script>
-        fetch('menu.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('menu-container').innerHTML = data);
+        fetch('menu.html')  // Path to the menu.html file
+        .then(response => response.text())  // Fetch data from menu.html
+        .then(data => { // Place the fetched data into the file
+            document.getElementById('menu-container').innerHTML = data;  
+        })
+        .catch(error => console.error('Error loading the menu:', error));
     </script>
+    <div id="menu-container"></div>
 
     <!-- Page Title -->
     <div class="hero-nobg">
@@ -412,6 +415,14 @@
                     <div class="speaker-details">
                         <div class="speaker-name">Mr. Rammohan Rao Vemula</div>
                         <div class="speaker-affiliation">CEO, L S Electricals</div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <img src="images/Anjani.jpg" class="speaker-photo" alt="Mr. Anjani Prasad Achanta">
+                    <div class="speaker-details">
+                        <div class="speaker-name">Mr. Anjani Prasad Achanta</div>
+                        <div class="speaker-affiliation">Principal Software Engineer, GE Vernova</div>
                     </div>
                 </div>
 
